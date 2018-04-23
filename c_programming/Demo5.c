@@ -1,0 +1,18 @@
+/*
+ * Program to calculate number of cards in the shoe.
+*/
+
+#include <stdio.h>
+int main(){
+   int decks = 0;
+   puts("Enter a number of decks: ");
+   scanf("%i", &decks);
+
+   if(decks < 1){
+      puts("That is not a valid number of decks.");
+      return 1;
+   }
+
+   printf("There are %i cards.\n", (decks*52));
+   return 0;
+}
