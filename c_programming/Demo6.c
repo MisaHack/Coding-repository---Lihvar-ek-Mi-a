@@ -3,6 +3,8 @@
  *
  */
 
+ //<a href="lihvarcekmisa@yahoo.com"> Misa Lihvarcek </a>
+
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
