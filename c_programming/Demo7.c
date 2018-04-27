@@ -30,8 +30,9 @@ int main(){
       puts("Count has gone up");
 
    /* Otherwise check if card was 10,J,Q or K */
-   if((val == 10) || (card_name[0] == 'J') || (card_name[0] == 'Q') || (card_name[0] == 'K'))
+   //if((val == 10) || (card_name[0] == 'J') || (card_name[0] == 'Q') || (card_name[0] == 'K'))
+      //puts("Count has gone down");
+   if(val == 10) //We needed just a single value
       puts("Count has gone down");
-
    return 0;
 }
