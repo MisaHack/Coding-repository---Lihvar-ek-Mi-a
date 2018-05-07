@@ -21,11 +21,20 @@ int main(){
             continue;
          default:
             val = atoi(card_name);
-            if(val < 1)
+            /*
+            if(val < 1){
                printf("ERROR %i is not in the range of 1 to 10!\n", val);
-            if(10 < val)
+               continue;
+             }
+            if(10 < val){
                printf("ERROR %i is not in the range of 1 to 10!\n", val);
-            continue;
+               continue;
+            }
+            */
+            if((val < 1) || (10 < val)){
+               printf("ERROR %i is not in the range of 1 to 10!\n", val);
+               continue;
+            }
       }
 
       if((val > 2) && (val < 7)){
