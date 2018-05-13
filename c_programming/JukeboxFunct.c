@@ -32,7 +32,7 @@ int main(){
    char search_for[80];
 
    printf("Enter song name: ");
-   //fgets(search_for, 5, stdin); -> for some reason this function doesn't work
+   //fgets(search_for, 80, stdin); //-> for some reason this function doesn't work
    scanf("%79s", search_for);
 
    find_track(search_for);
