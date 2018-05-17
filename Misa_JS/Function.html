@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Function</title>
+   <meta charset=utf-8>
+
+   <script>
+      /*Program for calculating value of function f(x)*/
+      /* x < 0, f(x) = x^2    */
+      /* x = 0, f(x) = 0      */
+      /* x > 0, f(x) = log(x) */
+
+
+      var x = prompt("Insert value of function argument f(x): ", "");
+      document.write("Value of \"x\" is: " + x + "<br>");
+
+      /*
+      switch(x){
+         case (x<0):
+            document.write("Value of \"f(x)\" is: " + (x*x));
+            break;
+         case 0:
+            document.write("Value of \"f(x)\" is: 0");
+            break;
+         case (x>0):
+            document.write("Value of \"f(x)\" is: " + Math.log(x));
+            break;
+         default:
+            document.write("Default");
+      }
+      */
+
+      if(x < 0)
+         document.write("For value of argument \"" + x + "\" function \"f(x)=x*x\" result is: " + (x*x));
+      if(x == 0)
+         document.write("For value of argument \"" + x + "\" function \"f(x)=0\" result is: " + x );
+      if(x > 0)
+         document.write("For value of argument \"" + x + "\" function \"f(x) = log(x)\" result is: " + Math.log(x));
+
+   </script>
+</head>
+<body>
+</body>
+</html>

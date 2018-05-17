@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Sum of numbers</title>
+   <meta charset=utf-8>
+
+   <script>
+      /*Program for calculating expression SUM(1/i), i=1,...,n , for given value "n".*/
+
+      var n = prompt("Insert value of \"n\": ","");
+
+      document.write("Value of input integer is: " + n + "<br>");
+
+      var result = 0;
+
+      for(var i=1; i <= n; i++){
+         result = result + 1/i;
+      }
+
+      document.write("Sum 1/i, i=1,...," + n + " is " + result);
+
+   </script>
+</head>
+<body>
+</body>
+</html>

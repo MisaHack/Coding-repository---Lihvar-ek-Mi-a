@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=utf-8>
+   <title>Exponent</title>
+
+   <script>
+      /*Program for computing value of "x^n", where "x" is real number, and "n" is natural number */
+
+      var x = prompt("Insert value of \"x\": ","");
+      document.write("Value of \"x\" : " + x + "<br>");
+
+      var n = prompt("Insert value of \"n\": ", "");
+      document.write("Value of \"n\" : " + n + "<br>");
+
+      var result = 1;
+
+      for(var i=0; i < n; i++){
+         result = result * x;
+      }
+
+      document.write("Result of \"x^n\" is: " + result);
+
+   </script>
+</head>
+<body>
+</body>
+</html>
