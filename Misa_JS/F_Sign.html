@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=utf-8>
+   <title>F_Sign</title>
+
+   <script>
+      /*Program for computing value of function that depends from value of variable "sign"*/
+      //f(x,sign) = sin(x),    sign ='s'
+      //f(x,sign) = cos(x),    sign ='c'
+      //f(x,sign) = arctan(x), sign ='a'
+      //f(x,sign) = ln(x),     sign ='l'
+      //f(x,sign) = exp(x),    sign ='e'
+
+      var x = prompt("Insert value of number 'x': ", "");
+
+      var signs = ['s','c','a','l','e'];
+
+      var correct_sign = false;
+
+      var sign;
+
+      do{
+         sign = prompt("Insert sign - 's', 'c', 'a', 'l' or 'e':","");
+
+         for(var i=0; i < signs.length; i++){
+            if(sign == signs[i]){
+               correct_sign = true;
+               break;
+            }
+         }
+      }
+      while(!correct_sign);
+
+      var result;
+
+      switch(sign){
+         case 's':
+            result = Math.sin(x);
+            break;
+         case 'c':
+            result = Math.cos(x);
+            break;
+         case 'a':
+            result = Math.atan(x);
+            break;
+         case 'l':
+            result = Math.log(x);
+            break;
+         case 'e':
+            result = Math.exp(x);
+            break;
+      }
+
+      document.write("Insert value of number 'x': " + x + "<br>");
+      document.write("Insert sign - 's', 'c', 'a', 'l' or 'e': " + sign + "<br>");
+      document.write("f(" + x + ", '" + sign + "') = " + result);
+
+   </script>
+</head>
+<body>
+</body>
+</html>
