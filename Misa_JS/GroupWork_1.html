@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Suma</title>
+   <script>
+      //Napisati program za izracunavanje sume 1/i, i=1...n, za zadatu vrednost n
+
+      var n = prompt("Unesite vrednost \"n\" za izracunavanje sume 1/i: ","");
+
+      var rez = 0; // rezultat izracunavanja sume
+      var i = 1; //brojac
+
+      while(!(i > n)){
+         rez = rez + 1/i; //dodeljujemo novu vrednost rezultatu
+         i = i+1; // povecavamo brojac za 1
+      }
+
+      document.write("Unesite prirodan broj n ---" + n + "<br>");
+      document.write("Sume 1/i, i=1,...," + rez + " je " + rez);
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Suma</title>
+   <script>
+      /*
+      var t = 0; //period
+      var index; //some index
+      var temp1 = 1; //temporary variable
+      var temp_2; // temp2
+      var logic = false;
+
+      for(var i=0; i < a.length; i++){
+         var x = a[i];
+
+         for(var j=1; j < a.length; j++){
+            if(x == a[j]){ //index of same element in array
+                index = j;
+                temp1= temp1 + 1;
+                logic = true;
+            }
+
+            if(logic){
+               temp_2 = index + index;
+
+               while(temp_2 < a.length){
+                  //temp_2 = index + index; //searching index of same element
+                  if(a[index] == a[temp_2]){
+                     temp1 = temp1 + 1;
+                  }
+
+                  temp_2 = temp_2 + index;
+               }
+           }
+         }
+      }
+      */
+
+      var niz = [2,5,3,2,5,3];
+
+      if((niz.length % 2) == 0){
+         document.write("Paran");
+         var pola = niz.length/2;
+         var T = 0;
+         for(var i=0; i < niz.length; i++){
+            if(niz[i] == niz[i+pola]){
+               T++;
+            }
+            else{
+               T = niz.length;
+               break;
+            }
+         }
+
+         document.write("T je: " + T);
+
+      }
+      else{
+         document.write("Neparan");
+      }
+
+   </script>
+</head>
+<body>
+</body>
+</html>
