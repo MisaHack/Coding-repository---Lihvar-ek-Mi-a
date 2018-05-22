@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=utf8>
+   <title>Biggest N</title>
+
+   <script>
+      do{
+         var a = prompt("Insert number 'a' (a > 1): ","");
+      }
+      while(a <= 1);
+
+      do{
+         var b = prompt("Insert number 'b' (b > 1): ","");
+      }
+      while(b <= 1);
+
+      var N = 0; //exponent is 0 at the begining
+
+      var b_exp = 1; //result is 1 at the begining
+
+      var started = 0;
+
+      while(a > b_exp){
+         b_exp = b_exp * b
+
+         if(started != 0)
+            N = N + 1;
+         else
+            started = 1;
+      }
+
+      document.write("Insert number 'a' (a > 1): " + a + "<br>");
+      document.write("Insert number 'b' (b > 1): " + b + "<br>");
+      document.write("Biggest 'N' were 'a > b^N' is: " + N);
+
+   </script>
+
+</head>
+<body>
+</body>
+</html>
