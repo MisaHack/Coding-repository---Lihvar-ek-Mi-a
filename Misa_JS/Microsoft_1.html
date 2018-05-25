@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=utf-8>
+   <title>Task 1</title>
+   <script>
+      var temp1 = 0;
+      var temp2 = 0;
+
+      var n = [2,5,6,2,5,6,2];
+
+      var i;
+
+      var j;
+
+      var max = 1;
+
+      for(i=0; i < n.length; i++){
+         for(j=i+1; j < n.length; j++){
+            var counter = 0;
+
+            for(var k=0; k <= i; i++){
+               if(n[k] != n[j + counter]){
+                  temp1 = 1;
+                  max = max + 1;
+                  break;
+               }
+
+               counter = counter + 1;
+            }
+            if(temp1 == 1){
+               break;
+            }
+         }
+
+         temp1=0;
+
+         if(j == n.length){
+            break;
+         }
+
+         //if(i >= n.length/2){
+            //temp2 = 1;
+          //  break;
+         //}
+
+      }
+
+      //if(temp2 == 1){
+        // document.write("Output > " + n.length);
+      //}
+      //else{
+         document.write("Output > " + max);
+      //}
+   </script>
+</head>
+<body>
+</body>
+</html>
