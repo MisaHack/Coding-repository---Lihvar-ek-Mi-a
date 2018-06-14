@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Task 17</title>
+
+   <script>
+       //first input number
+       var first_number;
+
+       //second input number
+       var second_number;
+
+       //operation
+       var operation;
+
+       //flag - for checking correct sign
+       var flag = true;
+
+       //result of operation
+       var result = 0;
+
+       //available operations
+       var operations = ['+','*','/'];
+
+       //input check for first number
+       do{
+          first_number = prompt("Insert first number: ");
+
+          if(isNaN(first_number))
+             alert("Insert value is not a number! Try again.");
+       }
+       while(isNaN(first_number));
+
+       //input check for second number
+       do{
+          second_number = prompt("Insert second number: ");
+
+          if(isNaN(second_number))
+             alert("Insert value is not a number! Try again.");
+       }
+       while(isNaN(second_number));
+
+       do{
+          operation = prompt("Insert sign for operation (+,*,/): ");
+
+          for(var i=0; i < operations.length; i++){
+             if(operation == operations[i]){
+                flag = false;
+                break;
+             }
+          }
+
+          //if flag is still 'true' entered sign is non existent
+          if(flag)
+             alert("Entered sign is not (+,*,/). Please enter correct sign.");
+       }
+       while(flag);
+
+       //Number.parseFloat() - converts string to number
+       first_number = Number.parseFloat(first_number);
+       second_number = Number.parseFloat(second_number);
+
+       switch(operation){
+          case '+':
+             result = first_number + second_number;
+             break;
+          case '*':
+             result = first_number * second_number;
+             break;
+          case '/':
+             result = first_number / second_number;
+             break;
+       }
+
+       //browser output
+       document.write("Insert first number: " + first_number + "<br>");
+       document.write("Insert second number: " + second_number + "<br>");
+       document.write("Insert operation: " + operation + "<br>");
+       document.write("Result is: " + result);
+
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Task 19</title>
+
+   <script>
+       //@author <a href="mailto:lihvarcekmisa@yahoo.com">Misa Lihvarcek</a>
+
+       var character;
+       var again = true;
+       var invalid_character = true;
+       var vowelFound = true;
+
+       var vowels = ['a','e','i','o','u'];
+
+       var vowelNumber = 0;
+       var consonantNumber = 0;
+
+       do{
+
+          vowelNumber = 0;
+          consonantNumber = 0;
+
+          do{
+             do{
+                character = prompt("Insert any character, or dot if you have finished:");
+
+                if(isNaN(character) || !(/\W/.test(character) && character != '.'))
+                   invalid_character = false;
+             }
+             while((character.length > 1) || invalid_character);
+
+             invalid_character = true;
+
+             vowelFound = true;
+
+             for(var i=0; i < vowels.length; i++){
+                if(character === vowels[i]){
+                   vowelNumber++;
+                   vowelFound = false;
+                   break;
+                }
+             }
+
+             if(vowelFound && character != '.'){
+                consonantNumber++;
+                //vowelFound = true;
+              }
+
+             document.write("Insert any character, or dot if you have finished --- " + character + "<br>");
+
+          }while(character != '.');
+
+          document.write("It has been inserted " + vowelNumber + " vowels and " + consonantNumber + " consonants." + "<br>");
+
+          do{
+             character = prompt("Do you want to repeat entire process? (y/n) :");
+
+             if(character === 'n')
+                again = false;
+             if((character !== 'y') && (character !== 'n'))
+                alert("Options are 'y' and 'n'!");
+          }
+          while((character.length > 1) && ((character=== 'y') || (character === 'n')));
+
+          document.write("Do you want to repeat entire process? (y/n) :" + character + "<br>");
+       }
+       while(again);
+
+
+   </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Task 1</title>
+
+   <script>
+      var niz = [1,2,3,1,2,3,1];
+
+      var j;
+
+      var duzina = 1;
+      var semafor = 0;
+
+      for(var i=0; i < niz.length; i++){
+         var k = 0;
+
+         for( j=i+1; j < niz.length; j++){
+            if(k > i)
+               k=0;
+
+            if(niz[k] != niz[j]){
+               duzina++;
+               semafor = 1;
+               break;
+            }
+
+            if(k < i){
+               k++;
+            }
+            else{
+               k = 0;
+            }
+         }
+
+         if(j >= niz.length)
+            duzina++;
+
+         if(semafor == 0){
+            break;
+         }
+
+         semafor = 0;
+
+      }
+
+      document.write(duzina);
+   </script>
+</head>
+<body>
+</body>
+</html>

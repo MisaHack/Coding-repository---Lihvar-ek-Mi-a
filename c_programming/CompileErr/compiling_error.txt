@@ -1,0 +1,11 @@
+C:\github\c_programming\CompileErr.c: In function 'main':
+C:\github\c_programming\CompileErr.c:14:38: warning: implicit declaration of function 'add_with_tax' [-Wimplicit-function-declaration]
+       printf("Total so far: %.2f\n", add_with_tax(val));
+                                      ^~~~~~~~~~~~
+C:\github\c_programming\CompileErr.c: At top level:
+C:\github\c_programming\CompileErr.c:24:7: error: conflicting types for 'add_with_tax'
+ float add_with_tax(float f){
+       ^~~~~~~~~~~~
+C:\github\c_programming\CompileErr.c:14:38: note: previous implicit declaration of 'add_with_tax' was here
+       printf("Total so far: %.2f\n", add_with_tax(val));
+                                      ^~~~~~~~~~~~
