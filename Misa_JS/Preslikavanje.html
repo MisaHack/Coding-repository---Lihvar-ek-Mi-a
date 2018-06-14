@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Preslikavanje</title>
+
+   <script>
+
+   function konverter(r,n){
+     for(var i=0; i < n.length; i++){
+        if(n[i] == -1){
+           n[i] = i;
+           //document.write("Prva." + temp1[i]);
+         }
+
+        //temp1[3]=9;
+
+        for(var j=i+1; j < n.length; j++){
+           //document.write(rec.charAt(i)===rec.charAt(j) + " " + temp1[j]===-1 + "<br>");
+
+           if(r.charAt(i)==r.charAt(j) && n[j]==-1){
+              n[j]=i;
+              //document.write("Prosao.");
+           }
+        }
+     }
+
+     for(var k=0; k < n.length; k++){
+        document.write(n[k]);
+     }
+     document.write("<br>");
+   }
+
+   function daLiJePreslikavanje(t1,t2){
+      for(var i=0; i< t1.length; i++)
+         if(t1[i] != t2[i])
+            return false;
+
+      return true;
+   }
+
+   var temp1 = [-1,-1,-1,-1];
+   var temp2 = [-1,-1,-1,-1];
+
+   var rec = "brain";
+   var rec2 = "space";
+
+   konverter(rec, temp1);
+   konverter(rec2, temp2);
+
+   document.write(daLiJePreslikavanje(temp1,temp2));
+
+   </script>
+</head>
+<body>
+</body>
+</html>
