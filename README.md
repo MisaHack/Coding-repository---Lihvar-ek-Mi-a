@@ -1,2 +1,2 @@
-# JSLearning
-Small team for JS coding. LivrachechTech
+# Coding repository
+Lihvarček Miša
