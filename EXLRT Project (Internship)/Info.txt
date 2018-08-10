@@ -1,0 +1,13 @@
+Date parametar za Slice(16,21)
+
+zeznuo sam se, ako bude npr. "12:01" nece prikazati nikakvu sliku
+bolje samo da izvucem broj "12" tj. sate
+
+while(true){
+   var temp = Date();
+   var time = temp.slice(16,21) + "";
+
+   if(time == "12:00"){
+      document.getElementById();
+   }
+}

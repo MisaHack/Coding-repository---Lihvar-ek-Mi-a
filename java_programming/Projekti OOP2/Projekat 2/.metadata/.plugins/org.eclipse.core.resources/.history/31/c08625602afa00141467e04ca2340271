@@ -1,0 +1,105 @@
+package bean;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+import javax.ejb.Stateful;
+
+import entity.UserG3;
+import entity.UserTweetG3;
+
+/**
+ * Session Bean implementation class UserG3Bean
+ * @author <a href="barugdzicnenad@gmail.com">Nenad Barugdzic</a>
+ */
+@Stateful
+@Remote(UserG3BeanRemote.class)
+public class UserG3Bean implements UserG3BeanRemote {
+
+	private UserG3 loggedUser;
+	@PersistenceContext(name = "TwitterServerPojectG3")
+	private EntityManager em;
+	
+	/**
+	 * @author Nenad Barugdzic
+	 */
+	@Override
+	public UserG3 loginUser(String tweetname, String password) {
+		TypedQuery<UserG3> tq = em.createNamedQuery("UserG3.login", UserG3.class);
+		tq.setParameter("tweetname", tweetname);
+		tq.setParameter("password", password);
+		loggedUser = tq.getSingleResult();
+		return loggedUser; 
+	}
+	
+	/**
+	 * @author Nemanja Dragin
+	 * Registrovanje usera
+	 */
+	@Override
+	public boolean registerUser(String email, String name, String surname, String tweetname, String password,
+			String avatar, String about, String birthdate) {
+		UserG3 u =  new UserG3();
+		u.setEmail(email);
+		u.setName(name);
+		u.setSurname(surname);
+		u.setTweetname(tweetname);
+	    u.setPassword(password);
+	    
+	    u.setAvatar(avatar);
+	    u.setAbout(about);
+	    u.setBirtdate(birthdate);
+	    em.persist(u);
+		
+	    return true;
+	}
+	/**
+	 * @author Nemanja Dragin 
+	 * Ako zelimo da menjamo usera, ne mozemo da menjamo tweetname i birthday, a ostale parametre mozemo
+	 * Tweetname je jedinstven i ako zelimo drugi, moramo da se registrujemo opet
+	 */
+	@Override
+	public boolean updateUser(String email, String name, String surname, String tweetname, String password,
+			String avatar, String about, String birthdate) {
+		UserG3 u = em.find(UserG3.class, password);
+		u.setEmail(email);
+		u.setName(name);
+		u.setSurname(surname);
+		u.setPassword(password);
+		u.setAvatar(avatar);
+		u.setAbout(about);
+		em.merge(u);
+		
+		return true;
+	}
+	
+	/**
+	 * @author Nemanja Dragin
+	 * Logout trivijalno
+	 */
+	@Override
+	@Remove
+	public void logoutUser() {
+		loggedUser = null;
+	}
+	
+	@Override
+	public List<UserTweetG3> getAllFavoriteTweets(UserTweetG3 user) {
+		TypedQuery<UserTweetG3> tq = em.createNamedQuery("UserTweetG3.getAll", UserTweetG3.class);
+		tq.setParameter("user", user);
+		return tq.getResultList();
+	}
+	
+	
+	
+    /**
+     * Default constructor. 
+     */
+    public UserG3Bean() {
+    	
+    }
+
+    public UserG3 getLoggedUser(){
+    	return loggedUser;
+    }
+}

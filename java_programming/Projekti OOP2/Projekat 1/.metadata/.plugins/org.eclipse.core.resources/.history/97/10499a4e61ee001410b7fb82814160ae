@@ -1,0 +1,7 @@
+package guiPackage;
+
+import javax.swing.JFrame;
+
+public class Battlefield extends JFrame{
+
+}

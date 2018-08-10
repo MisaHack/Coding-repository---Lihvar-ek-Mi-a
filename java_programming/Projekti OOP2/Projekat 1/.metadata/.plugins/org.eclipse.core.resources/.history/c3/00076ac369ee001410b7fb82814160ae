@@ -1,0 +1,119 @@
+package guiPackage;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.Rectangle;
+import java.awt.Dimension;
+
+import javax.swing.JSplitPane;
+
+import java.awt.GridLayout;
+
+import javax.swing.JLabel;
+
+import java.awt.FlowLayout;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.BoxLayout;
+import javax.swing.SwingConstants;
+
+public class Battlefield extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Battlefield frame = new Battlefield();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Battlefield() {
+		//polja table na koja stavljamo podmornice
+		List<List<JLabel>> fields = new ArrayList<>();
+		
+		try{
+		   UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());	
+		}
+		catch(){
+			
+		}
+		
+		
+		setPreferredSize(new Dimension(800, 600));
+		setMaximumSize(new Dimension(800, 600));
+		setMinimumSize(new Dimension(800, 600));
+		setTitle("Submarine Battle");
+		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Battlefield.class.getResource("/guiPackage/icons/submarine.png")));
+		setBackground(Color.WHITE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JPanel osnovniPanel = new JPanel();
+		contentPane.add(osnovniPanel, BorderLayout.CENTER);
+		osnovniPanel.setLayout(new BorderLayout(0, 0));
+		
+		JSplitPane splitMainPanel = new JSplitPane();
+		splitMainPanel.setEnabled(false);
+		splitMainPanel.setResizeWeight(0.5);
+		osnovniPanel.add(splitMainPanel);
+		
+		JPanel leftPanel = new JPanel();
+		leftPanel.setMinimumSize(new Dimension(300, 300));
+		leftPanel.setMaximumSize(new Dimension(300, 300));
+		splitMainPanel.setLeftComponent(leftPanel);
+		leftPanel.setLayout(new GridLayout(10, 10, 0, 0));
+		
+		JPanel rightPanel = new JPanel();
+		splitMainPanel.setRightComponent(rightPanel);
+		rightPanel.setLayout(new GridLayout(10, 10, 0, 0));
+		
+		JPanel downPanel = new JPanel();
+		downPanel.setPreferredSize(new Dimension(10, 100));
+		downPanel.setMinimumSize(new Dimension(10, 100));
+		downPanel.setMaximumSize(new Dimension(32767, 100));
+		contentPane.add(downPanel, BorderLayout.SOUTH);
+		downPanel.setLayout(new BoxLayout(downPanel, BoxLayout.X_AXIS));
+		
+		JPanel leftScorePanel = new JPanel();
+		leftScorePanel.setPreferredSize(new Dimension(100, 10));
+		leftScorePanel.setMinimumSize(new Dimension(200, 10));
+		leftScorePanel.setMaximumSize(new Dimension(200, 32767));
+		contentPane.add(leftScorePanel, BorderLayout.WEST);
+		leftScorePanel.setLayout(new GridLayout(6, 1, 0, 0));
+		
+		JPanel rightScorePanel = new JPanel();
+		rightScorePanel.setMinimumSize(new Dimension(100, 10));
+		rightScorePanel.setMaximumSize(new Dimension(100, 32767));
+		rightScorePanel.setPreferredSize(new Dimension(100, 10));
+		contentPane.add(rightScorePanel, BorderLayout.EAST);
+		rightScorePanel.setLayout(new GridLayout(6, 1, 0, 0));
+	}
+
+}

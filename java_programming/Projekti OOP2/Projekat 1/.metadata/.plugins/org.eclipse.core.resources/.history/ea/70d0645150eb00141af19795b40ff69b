@@ -1,0 +1,33 @@
+package abstractFigures;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Klasa koja daje opšte informacije o tabli na kojoj se igra.
+ * Ostale klase koje predstavljaju tablu za igru nasleðuju ovu klasu.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarcek Misa </a> 
+ *
+ */
+
+public abstract class AbstractBoard {
+	
+   private List<List<Integer>> board;	
+	
+   AbstractBoard(){
+	  //prazna tabla 
+	  board = new ArrayList<>();
+	  
+	  //dodajemo polja table
+	  for(int row=0; row < 10; row++)
+		 board.add(new ArrayList<int>());
+	  
+	  //inicijalno tablu popunjavamo nulama
+	  for(List<Integer> row: board)
+	     for(int column=0; column < 10; column ++)
+	    	row.add(0);
+	  
+	  
+   }
+}

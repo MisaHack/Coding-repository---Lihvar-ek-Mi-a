@@ -1,0 +1,5 @@
+package abstractFigures;
+
+public class Player2_Board extends AbstractBoard{
+
+}

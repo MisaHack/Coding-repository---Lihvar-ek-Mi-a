@@ -1,0 +1,7 @@
+package abstractFigures;
+
+public abstract class AbstractBoard {
+   AbstractBoard(){
+	   
+   }
+}

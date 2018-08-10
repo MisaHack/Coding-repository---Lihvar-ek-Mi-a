@@ -1,0 +1,131 @@
+package abstractFigures;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import static java.lang.System.out;
+
+/**
+ * Klasa koja daje opšte informacije o tabli na kojoj se igra.
+ * Ostale klase koje predstavljaju tablu za igru nasleðuju ovu klasu.
+ * 
+ * Inicijalni izgled table:
+ * 
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarcek Misa </a> 
+ *
+ */
+
+public abstract class AbstractBoard {
+   
+   //tabla
+   protected static List<List<Integer>> board;
+   
+   //konstantan broj vrsta i kolona na tabli
+   private final int NUM_ROWS = 10;
+   private final int NUM_COLUMNS = 10;
+   
+   //konstatan broj podmornica na tabli
+   protected final int NUM_2LENGTH_SUBS = 3;
+   protected final int NUM_3LENGTH_SUBS = 2;
+   protected final int NUM_4LENGTH_SUBS = 1;
+	
+   AbstractBoard(){
+	  //prazna tabla 
+	  board = new ArrayList<>(NUM_ROWS);
+	  
+	  //dodajemo polja table
+	  for(int row=0; row < 10; row++)
+		 board.add(new ArrayList<Integer>(NUM_COLUMNS));
+	  
+	  //inicijalno tablu popunjavamo nulama
+	  for(List<Integer> row: board)
+	     for(int column=0; column < 10; column ++)
+	    	row.add(0);
+   }
+   
+   /**
+    * Metod vraæa broj vrsta na tabli.
+    * 
+    * @return broj vrsta
+    */
+   public int getRowCount(){
+	  return board.size(); 
+   }
+   
+   /**
+    * Metod vraæa broj kolona na tabli.
+    * 
+    * @return broj kolona
+    */
+   public int getColumnCount(){
+	  return NUM_COLUMNS;
+   }
+   
+   
+   /**
+    * Metod vraca dozvoljeni broj podmornica duzine 2.
+    * 
+    * @return broj podmornica duzine 2
+    */
+   public int getNum2SubsCount(){
+	  return NUM_2LENGTH_SUBS; 
+   }
+   
+   /**
+    * Metod vraca dozvoljeni broj podmornica duzine 3.
+    * 
+    * @return  broj podmornica duzine 3
+    */
+   public int getNum3SubsCount(){
+	  return NUM_3LENGTH_SUBS; 
+   }
+   
+   /**
+    * Metod vraca dozvoljeni broj podmornica duzine 4.
+    * 
+    * @return  broj podmornica duzine 4
+    */
+   public int getNum4SubsCount(){
+	  return NUM_4LENGTH_SUBS; 
+   }
+   
+   /**
+    * Metod stampa trenutni izgled table u konzoli.
+    */
+   public void printTable(){
+	  for(int row=0; row < NUM_ROWS; row++){
+		 out.print("[");
+		 for(int column=0; column < NUM_COLUMNS; column++){
+			out.printf("%6d,",board.get(row).get(column));
+		 }
+		 out.println("]");
+		 out.printf("%s", "}"));
+	  } 
+   }
+   
+   /**
+    * Metod služi za postavljanje podmornice na tablu,
+    * s tim da ce jedan kraj podmornice na tabli imati
+    * koordinate x1,y1 a drugi kraj podmornice x2,y2
+    */
+   public abstract void putSubmarine(Submarine submarine,int x1,int y1);
+   
+   
+   
+   public static void main(String [] args){
+	  //AbstractBoard ab = new AbstractBoard();
+	  //System.out.print(ab.getColumnCount()); 
+	  //System.out.print(board.size());
+   }
+}

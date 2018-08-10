@@ -1,0 +1,16 @@
+package networkPackage.remote;
+
+import java.rmi.RemoteException;
+
+/**
+ * Remote interfejs igre.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com">Lihvarcek Misa</a>
+ *
+ */
+
+public interface SubmarineNet extends Remote{
+   public static final String RMI_NAME = "CalcServer";
+   
+   boolean shootSubmarine(int x1,int y1) throws RemoteException;
+}

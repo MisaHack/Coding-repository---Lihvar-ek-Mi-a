@@ -1,0 +1,100 @@
+package abstractFigures;
+
+/**
+ * Klasa predstavlja podmornicu sa svim njenim osobinama.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarèek Miša </a>
+ *
+ */
+
+public class Submarine {
+   private int id;
+   private int length;
+   private String orientation;
+   private int damaged;
+   private boolean destroyed;
+   
+   Submarine(int id,int length, String orientation){
+	  this.id = id;
+	  this.length = length;
+	  this.orientation = orientation;
+	  
+	  damaged = 0;
+	  destroyed = false;
+   }
+   
+   /**
+    * Metod vraca identifikaciju podmornice
+    * 
+    * @return id
+    */
+   public String getId(){
+	  return id;
+   }
+   
+   
+   /**
+    * Metod postavlja identifikaciju podmornice
+    * 
+    * @param ID podmornice
+    */
+   public void setId(String ID){
+	  id = ID;
+   }
+   
+   /**
+    * Metod vraca duzinu podmornice.
+    * 
+    * @return length
+    */
+   public int getLength(){
+	  return length; 
+   }
+   
+   /**
+    * Metod vraca orijentaciju podmornice [horizantalno ili vertikalno]
+    * 
+    * @return orientation
+    */
+   public String getOrientation(){
+	  return orientation;   
+   }
+   
+   /**
+    * Metod postavlja orijentaciju podmornice [horizantalno ili vertikalno]
+    * 
+    * @param newOrientation
+    */
+   public void setOrientation(String newOrientation){
+	  orientation = newOrientation; 
+   }
+   
+   /**
+    * Metod vraca stepen ostecenosti podmornice.
+    * 
+    * @return damaged
+    */
+   public int getDamageLevel(){
+	  return damaged; 
+   }
+   
+   /**
+    * Metod daje povratnu informaciju da li je podmornica unistena.
+    * 
+    * @return destroyed
+    */
+   public boolean isDestroyed(){
+	  return destroyed; 
+   }
+   
+   /**
+    * Metod kojim ostecujemo podmornicu podmornicu kada je pogodjena.
+    * 
+    */
+   public void makeDamage(){
+	  damaged += 1;
+	  
+	  if(damaged >= length)
+		 destroyed = true;
+   }
+}

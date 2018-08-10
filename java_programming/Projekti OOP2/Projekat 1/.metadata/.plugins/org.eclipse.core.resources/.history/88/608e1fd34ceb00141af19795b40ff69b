@@ -1,0 +1,15 @@
+package abstractFigures;
+
+/**
+ * Klasa koja daje opšte informacije o tabli na kojoj se igra.
+ * Ostale klase koje predstavljaju tablu nasleðuju ovu klasu.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarcek Misa </a> 
+ *
+ */
+
+public abstract class AbstractBoard {
+   AbstractBoard(){
+	   
+   }
+}

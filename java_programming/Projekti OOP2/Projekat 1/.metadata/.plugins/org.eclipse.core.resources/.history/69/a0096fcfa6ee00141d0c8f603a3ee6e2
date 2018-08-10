@@ -1,0 +1,15 @@
+package networkPackage.client;
+
+public class SubClient {
+   public static void main(String [] args) throws RemoteException, NotBoundException{
+	  //pribavi referencu na udaljeni objekat pod imenom u konstanti
+	  //RMI_NAME
+			   
+	   Registry reg = LocateRegistry.getRegistry(40);
+ 	   Calculator remote = (Calculator)reg.lookup(Calculator.RMI_NAME);
+			  
+	   int z = remote.add(18, 24); // metod se izvrsava na serveru
+			  
+  	   System.out.println("The result is: " + z);
+   }
+}

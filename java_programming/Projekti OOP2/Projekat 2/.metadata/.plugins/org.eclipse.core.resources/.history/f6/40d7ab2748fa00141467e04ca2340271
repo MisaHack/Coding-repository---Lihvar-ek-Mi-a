@@ -1,0 +1,61 @@
+package entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+/**
+ * Entity implementation class for Entity: CommentG3
+ *
+   * @author <a href="barugdzicnenad@gmail.com">Nenad Barugdzic</a>
+ */
+@Entity
+public class CommentG3 implements Serializable {
+
+	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue
+	private int comment_id;
+	private String commentText;
+	@ManyToOne
+	private TweetG3 tweets;
+	@ManyToOne
+	private UserG3 users;
+	
+	public void setComment_id(int comment_id){
+		this.comment_id = comment_id;
+	}
+   
+	public int getComment_id(){
+		return comment_id;
+	}
+	
+	public void setCommentText(String commentText){
+		this.commentText = commentText ;
+	}
+	
+	public String getCommentText(){
+		return commentText;
+	}
+	
+	public void setTweets(TweetG3 tweets){
+		this.tweets = tweets;
+	}
+	
+   public TweetG3 getTweets(){
+	   return tweets;
+   }
+   
+	public void setUsers(UserG3 users){
+		this.users = users;
+	}
+	
+   public UserG3 getUsers(){
+	   return users;
+   }
+}

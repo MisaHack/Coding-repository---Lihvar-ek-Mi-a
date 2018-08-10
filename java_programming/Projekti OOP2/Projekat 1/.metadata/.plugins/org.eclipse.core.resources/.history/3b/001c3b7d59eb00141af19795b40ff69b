@@ -1,0 +1,12 @@
+package abstractFigures;
+
+/**
+ * Tabla na koju prvi igraè stavlja svoje "podmornice".
+ * 
+ * @author Miša
+ *
+ */
+
+public class Player1_Board {
+
+}

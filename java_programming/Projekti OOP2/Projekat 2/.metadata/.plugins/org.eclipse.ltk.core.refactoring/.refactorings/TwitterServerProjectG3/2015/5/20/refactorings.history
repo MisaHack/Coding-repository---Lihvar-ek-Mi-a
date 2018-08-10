@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;bean.FillDatabase&apos; to &apos;FillDatabaseG3&apos;&#x0D;&#x0A;- Original project: &apos;TwitterServerProjectG3&apos;&#x0D;&#x0A;- Original element: &apos;bean.FillDatabase&apos;&#x0D;&#x0A;- Renamed element: &apos;bean.FillDatabaseG3&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FillDatabase&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;bean{FillDatabase.java[FillDatabase" matchStrategy="1" name="FillDatabaseG3" qualified="false" references="true" similarDeclarations="false" stamp="1431603825443" textual="false" version="1.0"/>
+</session>

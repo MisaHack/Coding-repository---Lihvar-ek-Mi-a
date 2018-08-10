@@ -1,0 +1,78 @@
+package abstractFigures;
+
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ * Klasa koja daje opšte informacije o tabli na kojoj se igra.
+ * Ostale klase koje predstavljaju tablu za igru nasleðuju ovu klasu.
+ * 
+ * Inicijalni izgled table:
+ * 
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * [0,0,0,0,0,0,0,0,0,0]
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarcek Misa </a> 
+ *
+ */
+
+public abstract class AbstractBoard {
+	
+   protected static List<List<Integer>> board;
+   
+   private final int NUM_ROWS = 10;
+   private final int NUM_COLUMNS = 10;
+	
+   AbstractBoard(){
+	  //prazna tabla 
+	  board = new ArrayList<>(NUM_ROWS);
+	  
+	  //dodajemo polja table
+	  for(int row=0; row < 10; row++)
+		 board.add(new ArrayList<Integer>(NUM_COLUMNS));
+	  
+	  //inicijalno tablu popunjavamo nulama
+	  for(List<Integer> row: board)
+	     for(int column=0; column < 10; column ++)
+	    	row.add(0);
+   }
+   
+   /**
+    * Metod vraæa broj vrsta na tabli.
+    * 
+    * @return broj vrsta
+    */
+   public int getRowCount(){
+	  return board.size(); 
+   }
+   
+   /**
+    * Metod vraæa broj kolona na tabli.
+    * 
+    * @return broj kolona
+    */
+   public int getColumnCount(){
+	  return NUM_COLUMNS;
+   }
+   
+   /**
+    * Metod služi za postavljanje podmornice na tablu.
+    */
+   public abstract void putSubmarine();
+   
+   
+   
+   public static void main(String [] args){
+	  //AbstractBoard ab = new AbstractBoard();
+	  //System.out.print(ab.getColumnCount()); 
+	  //System.out.print(board.size());
+   }
+}

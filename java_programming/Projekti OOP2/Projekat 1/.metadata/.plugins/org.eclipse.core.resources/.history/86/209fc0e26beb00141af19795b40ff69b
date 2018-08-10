@@ -1,0 +1,14 @@
+package abstractFigures;
+
+public class Submarine {
+   private int id;
+   private String orientation;
+   private int length;
+   private int damaged;
+   private boolean destroyed;
+   
+   Submarine(int id,int length, String Orientation){
+	   
+   }
+
+}

@@ -1,0 +1,20 @@
+package networkPackage.server;
+
+import java.rmi.registry.Registry;
+
+import networkPackage.remote.SubmarineNet;
+
+
+
+public class Run {
+	  public static void main(String [] args) throws RemoteException{
+		  SubmarineNetImpl server = new SubmarineNetImpl();
+		  
+		  //registruj objekat servera pod imenom definisanim u konstanti
+		  //RMI_NAME
+		  Registry reg = LocateRegistry.createRegistry(40);
+		  reg.rebind(SubmarineNet.RMI_NAME, server);
+		  
+		  System.out.println("Server binding succeeded");  
+	   }
+}

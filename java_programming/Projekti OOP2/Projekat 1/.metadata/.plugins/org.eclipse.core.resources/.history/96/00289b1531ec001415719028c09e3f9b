@@ -1,0 +1,14 @@
+package abstractFigures;
+
+public class TestFeatures {
+   public static void main(String [] args){
+	   Player1_Board p1 = new Player1_Board();
+	   p1.printTable();
+	   
+	   Submarine s = new Submarine(1, 2, "horizontal");
+	   
+	   p1.putSubmarine(s, 1, 1);
+	   
+	   p1.printTable();
+   }
+}

@@ -1,0 +1,46 @@
+// You may need to import below namespaces in a C# TBB
+
+<%@ Import Namespace="Tridion.ContentManager.ContentManagement.Fields"%>
+<%@ Import Namespace="System.Collections.Generic"%>
+
+
+// In a C# TBB you can use below sample for getting the Component 
+// The C# TBB must be used inside a ComponentTemplate
+
+Item componentItem = package.GetByType(ContentType.Component);
+Component component  = engine.GetObject(componentItem.GetAsSource().GetValue("Article 1")) as Component;
+
+//Get the field (Multimedia field)
+
+Component component = (Component)_engine.GetObject("tcm:13-1419");
+ ItemFields componentFields = new ItemFields(component.Content, component.Schema);
+// Use MultimediaLinkField class to read a field of component that links to 
+// a multimedia component
+ MultimediaLinkField mmfield = componentFields["ArticleImage Description"] as MultimediaLinkField ;
+ Component mmComponent = mmfield.Value;  
+
+// Get the Component first as shown above.
+// Now get the fields (Text Fields)
+
+ItemFields fieldsTitle = new ItemFields(component.Content, component.Schema);
+TextField textTitle = fieldsTitle["ArticleName Description"] as TextField;
+
+// Get the value of 'ShortDescription' field in component
+string descriptionArticleImage = textTitle.Value;
+
+
+//Get the field (Text field)
+ItemFields fieldsTextBox = new ItemFields(component.Content, component.Schema);
+TextField textTextBox = fieldsTextBox["ArticleText Description"] as TextField;
+
+// Get the value of 'ShortDescription' field in component
+string descriptionTextBox = textTextBox.Value;
+
+//Get the field (Text field)
+ItemFields fieldsLeftRight = new ItemFields(component.Content, component.Schema);
+TextField textLeftRight = fieldsLeftRight["isLeftOrRight Description"] as TextField;
+
+// Get the value of 'ShortDescription' field in component
+string descriptionLeftRight = text.Value;
+
+

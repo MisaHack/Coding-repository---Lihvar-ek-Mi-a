@@ -1,0 +1,7 @@
+package abstractFigures;
+
+public class TestFeatures {
+   public static void main(String [] args){
+	   
+   }
+}

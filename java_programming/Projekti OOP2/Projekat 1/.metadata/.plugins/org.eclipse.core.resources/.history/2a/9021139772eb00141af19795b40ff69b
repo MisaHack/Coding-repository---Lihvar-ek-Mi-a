@@ -1,0 +1,20 @@
+package abstractFigures;
+
+/**
+ * Tabla na koju prvi igraè stavlja svoje "podmornice".
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarèek Miša </a>
+ *
+ */
+
+public class Player1_Board extends AbstractBoard{
+	
+   Player1_Board(){
+	  super();  
+   }
+   
+   public void putSubmarine(Submarine submarine){
+	  int submarineID = submarine.getId();
+	  int submarineLength = submarine.getLength();
+   }
+}

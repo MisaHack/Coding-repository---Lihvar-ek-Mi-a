@@ -1,0 +1,12 @@
+package networkPackage.remote;
+
+/**
+ * Remote interfejs igre.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com">Lihvarcek Misa</a>
+ *
+ */
+
+public class SubmarineNet extends Remote{
+   public static final String RMI_NAME = "CalcServer";
+}

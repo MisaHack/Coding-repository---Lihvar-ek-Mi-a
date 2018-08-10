@@ -1,0 +1,301 @@
+package guiStuff;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.ComponentOrientation;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.logging.Logger;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSplitPane;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+
+import bean.UserG3Bean;
+import bean.UserG3BeanRemote;
+import entity.UserG3;
+
+/**
+ * Izgled "Home" stranice Twitter-a.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarcek Misa </a>
+ *
+ */
+
+public class HomePageG3 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtSearch;
+	private JTextField textField;
+	private UserG3 loggedUser;
+	private static final Logger logger = Logger.getLogger(HomePageG3.class.getName());
+	private static final String SERVER_PROJECT = "TwitterServerProjectG3";
+	private static InitialContext ctx;
+
+	/**
+	 * Pokretanje aplikacije.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					HomePageG3 frame = new HomePageG3();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Kreiranje okvira.
+	 */
+	public HomePageG3() {
+		String statefulName = "ejb:/" + SERVER_PROJECT + "//" + UserG3Bean.class.getSimpleName()
+				+ "!" + UserG3BeanRemote.class.getName() + "?stateful";
+		setTitle("Twitter Home");
+		//sistemski look & feel
+		try{
+		   UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}
+		catch(Exception e){
+		   e.printStackTrace();	
+		}
+		setIconImage(Toolkit.getDefaultToolkit().getImage(HomePageG3.class.getResource("/guiStuff/icons/twitter_logo2.png")));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//velicina pocetnog prozora
+		setBounds(100, 100, 800, 600);
+		contentPane = new JPanel();
+		contentPane.setMaximumSize(new Dimension(200, 25));
+		contentPane.setMinimumSize(new Dimension(200, 25));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		//osnovni panel
+		JPanel optionsPanel = new JPanel();
+		contentPane.add(optionsPanel, BorderLayout.NORTH);
+		
+		//postavljamo istu dimenziju za sve dugmice
+		Dimension d = new Dimension(100,25);
+		optionsPanel.setLayout(new BoxLayout(optionsPanel, BoxLayout.X_AXIS));
+		
+		Component h_strut_1 = Box.createHorizontalStrut(5);
+		optionsPanel.add(h_strut_1);
+		
+		//"Home" dugme
+		JButton btnHome = new JButton("Home");
+		btnHome.setToolTipText("Home page");
+		setButtonSize(btnHome, d);		
+		optionsPanel.add(btnHome);
+		
+		Component h_strut_2 = Box.createHorizontalStrut(5);
+		optionsPanel.add(h_strut_2);
+		
+		//"Profile" dugme
+		JButton btnProfile = new JButton("Profile");
+		btnProfile.setToolTipText("Profile page");
+		btnProfile.setMinimumSize(new Dimension(100, 25));
+		btnProfile.setMaximumSize(new Dimension(100, 25));
+		btnProfile.setPreferredSize(new Dimension(100, 25));
+		setButtonSize(btnProfile, d);
+		optionsPanel.add(btnProfile);
+		
+		Component h_strut_3 = Box.createHorizontalStrut(15);
+		optionsPanel.add(h_strut_3);
+		
+		JLabel searchLabel = new JLabel("");
+		searchLabel.setSize(new Dimension(25, 25));
+		searchLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		searchLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+		searchLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+		searchLabel.setIconTextGap(0);
+		searchLabel.setPreferredSize(new Dimension(25, 25));
+		searchLabel.setMinimumSize(new Dimension(25, 25));
+		searchLabel.setMaximumSize(new Dimension(25, 25));
+		searchLabel.setIcon(new ImageIcon(HomePageG3.class.getResource("/guiStuff/icons/search_icon.png")));
+		optionsPanel.add(searchLabel);
+		
+		Component h_strut_4 = Box.createHorizontalStrut(5);
+		optionsPanel.add(h_strut_4);
+		
+		txtSearch = new JTextField();
+		txtSearch.setBounds(new Rectangle(0, 0, 0, 200));
+		txtSearch.setHorizontalAlignment(SwingConstants.CENTER);
+		txtSearch.setSize(new Dimension(200, 25));
+		txtSearch.setMinimumSize(new Dimension(200, 25));
+		txtSearch.setMaximumSize(new Dimension(200, 25));
+		txtSearch.setText("Search twitter...");
+		txtSearch.setPreferredSize(new Dimension(200, 25));
+		optionsPanel.add(txtSearch);
+		txtSearch.setColumns(10);
+		
+		Component h_strut_5 = Box.createHorizontalStrut(5);
+		optionsPanel.add(h_strut_5);
+		
+		JComboBox searchBox = new JComboBox();
+		searchBox.setAlignmentX(Component.LEFT_ALIGNMENT);
+		searchBox.setMaximumRowCount(10);
+		searchBox.setToolTipText("Search results");
+		searchBox.setMinimumSize(new Dimension(100, 25));
+		searchBox.setMaximumSize(new Dimension(100, 25));
+		searchBox.setPreferredSize(new Dimension(100, 25));
+		optionsPanel.add(searchBox);
+		
+		Component horizontalGlue = Box.createHorizontalGlue();
+		optionsPanel.add(horizontalGlue);
+		
+		JButton btnLogOut = new JButton("Log out");
+		btnLogOut.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+		optionsPanel.add(btnLogOut);
+		btnLogOut.setAlignmentX(Component.RIGHT_ALIGNMENT);
+		btnLogOut.setMinimumSize(new Dimension(100, 25));
+		btnLogOut.setMaximumSize(new Dimension(100, 25));
+		btnLogOut.setPreferredSize(new Dimension(100, 25));
+		btnLogOut.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+					System.out.println("btnExit.actionPerformed, event="+e);
+				setVisible(false);
+				try {
+					setLoggedUser(null);
+					LoginUserFrameG3 frame = new LoginUserFrameG3();
+					frame.openLoginPage();
+					setVisible(false);
+				} catch (NamingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+			
+		});
+		
+		Component horizontalStrut = Box.createHorizontalStrut(5);
+		optionsPanel.add(horizontalStrut);
+		
+		JSplitPane splitPane = new JSplitPane();
+		splitPane.setEnabled(false);
+		splitPane.setContinuousLayout(true);
+		splitPane.setResizeWeight(0.2);
+		contentPane.add(splitPane, BorderLayout.CENTER);
+		
+		JPanel infoPanel = new JPanel();
+		infoPanel.setPreferredSize(new Dimension(200, 10));
+		infoPanel.setMinimumSize(new Dimension(200, 10));
+		infoPanel.setMaximumSize(new Dimension(200, 32767));
+		splitPane.setLeftComponent(infoPanel);
+		infoPanel.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		JSplitPane splitPane_1 = new JSplitPane();
+		splitPane_1.setEnabled(false);
+		splitPane_1.setResizeWeight(0.5);
+		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
+		infoPanel.add(splitPane_1);
+		
+		JPanel avatarPanel = new JPanel();
+		avatarPanel.setPreferredSize(new Dimension(10, 400));
+		avatarPanel.setMinimumSize(new Dimension(10, 400));
+		splitPane_1.setLeftComponent(avatarPanel);
+		avatarPanel.setLayout(new BorderLayout(0, 0));
+		
+		JLabel avatarLabel = new JLabel("AVATAR");
+		avatarLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+		avatarLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		avatarLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+		avatarPanel.add(avatarLabel);
+		
+		
+		JPanel userStatsPanel = new JPanel();
+		splitPane_1.setRightComponent(userStatsPanel);
+		userStatsPanel.setLayout(new GridLayout(10, 1, 2, 2));
+		
+		Box horizontalBox = Box.createHorizontalBox();
+		horizontalBox.setAlignmentY(Component.CENTER_ALIGNMENT);
+		userStatsPanel.add(horizontalBox);
+		
+		JPanel panel = new JPanel();
+		panel.setMinimumSize(new Dimension(10, 50));
+		horizontalBox.add(panel);
+		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+		
+		JPanel panel_1 = new JPanel();
+		userStatsPanel.add(panel_1);
+		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.X_AXIS));
+		
+		JButton btnFollowing = new JButton("FOLLOWING");
+		panel_1.add(btnFollowing);
+		
+		JPanel panel_2 = new JPanel();
+		FlowLayout flowLayout_2 = (FlowLayout) panel_2.getLayout();
+		flowLayout_2.setVgap(10);
+		userStatsPanel.add(panel_2);
+		
+		JButton btnFollowers = new JButton("FOLLOWERS");
+		panel_2.add(btnFollowers);
+		
+		JPanel timelinePanel = new JPanel();
+		splitPane.setRightComponent(timelinePanel);
+		timelinePanel.setLayout(new BorderLayout(0, 0));
+		
+		JPanel statusPanel = new JPanel();
+		statusPanel.setBackground(new Color(105, 105, 105));
+		statusPanel.setPreferredSize(new Dimension(10, 100));
+		statusPanel.setMaximumSize(new Dimension(32767, 100));
+		statusPanel.setMinimumSize(new Dimension(10, 100));
+		timelinePanel.add(statusPanel, BorderLayout.NORTH);
+		statusPanel.setLayout(new GridLayout(2, 1, 3, 3));
+		
+		textField = new JTextField();
+		statusPanel.add(textField);
+		textField.setColumns(10);
+	}
+	
+	public void setButtonSize(JButton btn,Dimension d){
+		btn.setPreferredSize(d);
+		btn.setMinimumSize(d);
+		btn.setMaximumSize(d);
+	}
+
+	public void setLoggedUser(UserG3 loggedUser){
+		this.loggedUser = loggedUser;
+	}
+
+	public UserG3 getLoggedUser(){
+		return loggedUser;
+	}
+	
+	public void openHomePage(){
+		try {
+			try {
+				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

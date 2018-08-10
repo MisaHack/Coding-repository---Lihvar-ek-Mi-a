@@ -1,0 +1,21 @@
+package abstractFigures;
+
+/**
+ * Klasa predstavlja podmornicu sa svim njenim osobinama.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarèek Miša </a>
+ *
+ */
+
+public class Submarine {
+   private int id;
+   private String orientation;
+   private int length;
+   private int damaged;
+   private boolean destroyed;
+   
+   Submarine(int id,int length, String Orientation){
+	   
+   }
+
+}

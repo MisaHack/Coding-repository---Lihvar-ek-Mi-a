@@ -1,0 +1,23 @@
+package networkPackage.server;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+import networkPackage.remote.SubmarineNet;
+
+/**
+ * Implementacija potapanja podmornica
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com">Lihvarcek Misa</a>
+ *
+ */
+
+public class SubmarineNetImpl extends UnicastRemoteObject implements SubmarineNet{
+
+	@Override
+	public boolean shootSubmarine(int x1, int y1) throws RemoteException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

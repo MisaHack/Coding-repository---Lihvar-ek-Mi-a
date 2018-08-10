@@ -1,0 +1,26 @@
+package abstractFigures;
+
+/**
+ * Tabla na koju drugi igraè stavlja svoje "podmornice",sa pratiæim metodama.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarèek Miša </a>
+ *
+ */
+
+public class Player2_Board extends AbstractBoard{ 
+	
+   Player2_Board(){
+	  super(); 
+   }
+   
+   public void putSubmarine(Submarine submarine,int x1,int y1){
+	   
+   }
+
+   @Override
+   public boolean shootSubmarine(int x1, int y1) {
+	   // TODO Auto-generated method stub
+	   return false;
+   }
+   
+}

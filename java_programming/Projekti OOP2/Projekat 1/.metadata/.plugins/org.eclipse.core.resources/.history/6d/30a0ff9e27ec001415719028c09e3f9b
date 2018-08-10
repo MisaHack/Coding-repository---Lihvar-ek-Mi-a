@@ -1,0 +1,113 @@
+package abstractFigures;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import javax.print.DocFlavor.STRING;
+
+
+/**
+ * Tabla na koju prvi igraè stavlja svoje "podmornice".
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarèek Miša </a>
+ *
+ */
+
+public class Player1_Board extends AbstractBoard{
+   //broj podmornica duzine 2,3 i 4 koje se trenutno nalaze na tabli.
+   private int No2LengthSubs;
+   private int No3LengthSubs;
+   private int No4LengthSubs;
+   
+   //cuvamo spisak svih podmornica, na tabli, u listi
+   List<Submarine> submarines = new ArrayList<>();
+	
+   Player1_Board(){
+	  super();
+	  
+	  No2LengthSubs = 0;
+	  No3LengthSubs = 0;
+	  No4LengthSubs = 0;
+   }
+   
+   public void putSubmarine(Submarine submarine,int x1,int y1){
+	  //uzimamo identifikaciju podmornice koju zelimo postaviti
+	  //na tablu
+	  int submarineID = submarine.getId();
+	  
+	  //uzimamo duzinu podmornice koju zelimo postaviti
+	  //na tablu
+	  int submarineLength = submarine.getLength();
+	  
+	  switch(submarineLength){
+	     case 2:
+	    	//proveravamo da li je broj podmornica na tabli veci
+	    	//od dozvoljenog broja date duzine
+	    	if(No2LengthSubs < NUM_2LENGTH_SUBS){
+	    		
+	    	   //ako mozemo staviti jos podmornica onda proveravamo da li
+	    	   //podmornica moze da stane na zeljeno mesto na tabli
+	    	   //tj. da li neka podmornica vec zauzima to mesto
+	    	   
+	    	   if(submarine.getOrientation().equals("horizontal")){
+	    	      for(int x=x1; x < x1+submarine.getLength()-1; x++){
+	    	    	 //ako je samo jedno od polja na koje smo planirali da postavimo
+	    	    	 //podmornicu zauzeto, ne mozemo uopste da postavimo podmornicu
+	    	    	 //na taj niz polja
+	    		     if(board.get(y1).get(x) != 0){
+	    		    	return; 
+	    		     } 
+	    	      }
+	    	      
+	    	      //ako su nam sva polja za postavljanje podmornice dostupna
+	    	      //povecavamo broj podmornica duzine 2 i onda postavljamo podmornicu na ta polja
+	    	      No2LengthSubs++;
+	    	      
+	    	      for(int x=x1; x < x1+submarine.getLength()-1; x++){
+	    	    	 //na polja table cemo postaviti jedinstvenu oznaku za svaku podmornicu pomocu dve cifre
+	    	    	 //u obliku: (duzina_podmornice + trenutni_broj_podmornica_te_duzine_na_tabli) = ta_Dva_Broja_Slepljena
+	    	    	 //primer: 2 + 1 = 21
+                     board.get(y1).set(x, Integer.parseInt(2 + "" + No2LengthSubs));
+	    	      }
+	    	      return;
+	    	   }
+	    	   
+	    	   
+	    	   //ukoliko je orijentacija podmornice vertikalna postupamo veoma slicno
+	    	   if(submarine.getOrientation().equals("horizontal")){
+		    	      for(int x=x1; x < x1+submarine.getLength()-1; x++){
+		    	    	 //ako je samo jedno od polja na koje smo planirali da postavimo
+		    	    	 //podmornicu zauzeto, ne mozemo uopste da postavimo podmornicu
+		    	    	 //na taj niz polja
+		    		     if(board.get(y1).get(x) != 0){
+		    		    	return; 
+		    		     } 
+		    	      }
+		    	      
+		    	      //ako su nam sva polja za postavljanje podmornice dostupna
+		    	      //povecavamo broj podmornica duzine 2 i onda postavljamo podmornicu na ta polja
+		    	      No2LengthSubs++;
+		    	      
+		    	      for(int x=x1; x < x1+submarine.getLength()-1; x++){
+		    	    	 //na polja table cemo postaviti jedinstvenu oznaku za svaku podmornicu pomocu dve cifre
+		    	    	 //u obliku: (duzina_podmornice + trenutni_broj_podmornica_te_duzine_na_tabli) = ta_Dva_Broja_Slepljena
+		    	    	 //primer: 2 + 1 = 21
+	                     board.get(y1).set(x, Integer.parseInt(2 + "" + No2LengthSubs));
+		    	      }
+		    	      return;
+		    	   }
+	    	   
+	    	}
+	    	
+	    	//ako je prekoracen broj podmornica date duzine vise ne mozemo
+	    	//postavljati taj tip podmornica
+	    	return;
+	     case 3:
+	    	 
+	     default:
+	        
+	  }
+	  
+	  
+   }
+}

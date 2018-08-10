@@ -1,0 +1,12 @@
+package networkPackage.server;
+
+/**
+ * Implementacija potapanja podmornica
+ * 
+ * @author Miša
+ *
+ */
+
+public class SubmarineNetImpl {
+
+}

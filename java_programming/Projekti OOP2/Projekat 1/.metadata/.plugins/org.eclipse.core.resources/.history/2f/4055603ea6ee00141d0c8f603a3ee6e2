@@ -1,0 +1,14 @@
+package networkPackage.server;
+
+public class Run {
+	  public static void main(String [] args) throws RemoteException{
+		  CalculatorImpl server = new CalculatorImpl();
+		  
+		  //registruj objekat servera pod imenom definisanim u konstanti
+		  //RMI_NAME
+		  Registry reg = LocateRegistry.createRegistry(40);
+		  reg.rebind(Calculator.RMI_NAME, server);
+		  
+		  System.out.println("Server binding succeeded");  
+	   }
+}

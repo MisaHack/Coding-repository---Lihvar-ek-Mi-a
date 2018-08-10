@@ -1,0 +1,19 @@
+package abstractFigures;
+
+import java.util.List;
+
+/**
+ * Klasa koja daje opšte informacije o tabli na kojoj se igra.
+ * Ostale klase koje predstavljaju tablu za igru nasleðuju ovu klasu.
+ * 
+ * @author <a href="mailto:lihvarcekmisa@yahoo.com"> Lihvarcek Misa </a> 
+ *
+ */
+
+public abstract class AbstractBoard {
+   private List<List<Integer>> table;	
+	
+   AbstractBoard(){
+	  table = new ArrayList<>(); 
+   }
+}

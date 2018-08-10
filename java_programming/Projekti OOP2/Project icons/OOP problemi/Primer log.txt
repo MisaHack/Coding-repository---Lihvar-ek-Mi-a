@@ -1,0 +1,16 @@
+Pravim novi stateful bean
+maj 12, 2015 5:12:02 PM org.jboss.ejb.client.EJBClient <clinit>
+INFO: JBoss EJB Client version 2.0.1.Final
+Exception in thread "main" javax.naming.NamingException: Failed to create proxy [Root exception is java.lang.IllegalStateException: EJBCLIENT000024: No EJB receiver available for handling [appName:, moduleName:MyServer, distinctName:] combination]
+	at org.jboss.ejb.client.naming.ejb.EjbNamingContext.createEjbProxy(EjbNamingContext.java:195)
+	at org.jboss.ejb.client.naming.ejb.EjbNamingContext.lookup(EjbNamingContext.java:176)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at oop2.teorijske.v09.beans.Main.testStateful(Main.java:25)
+	at oop2.teorijske.v09.beans.Main.main(Main.java:15)
+Caused by: java.lang.IllegalStateException: EJBCLIENT000024: No EJB receiver available for handling [appName:, moduleName:MyServer, distinctName:] combination
+	at org.jboss.ejb.client.EJBClientContext.requireEJBReceiver(EJBClientContext.java:813)
+	at org.jboss.ejb.client.EJBClient.createSessionWithPossibleRetries(EJBClient.java:222)
+	at org.jboss.ejb.client.EJBClient.createSession(EJBClient.java:202)
+	at org.jboss.ejb.client.naming.ejb.EjbNamingContext.doCreateProxy(EjbNamingContext.java:216)
+	at org.jboss.ejb.client.naming.ejb.EjbNamingContext.createEjbProxy(EjbNamingContext.java:193)
+	... 4 more

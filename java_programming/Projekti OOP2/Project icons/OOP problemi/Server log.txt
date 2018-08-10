@@ -1,0 +1,132 @@
+17:10:32,052 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.3.Final
+17:10:32,411 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.2.Final
+17:10:32,501 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: WildFly 8.2.0.Final "Tweek" starting
+17:10:34,411 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found MyServer.war in deployment directory. To trigger deployment create a file called MyServer.war.dodeploy
+17:10:34,465 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+17:10:34,501 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.3.0.Final
+17:10:34,532 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.3.0.Final
+17:10:34,622 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 45) JBAS013171: Activating Security Subsystem
+17:10:34,623 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 31) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+17:10:34,670 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 38) JBAS012615: Activated the following JSF Implementations: [main]
+17:10:34,678 INFO  [org.jboss.as.security] (MSC service thread 1-1) JBAS013170: Current PicketBox version=4.0.21.Final
+17:10:34,684 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 32) JBAS010280: Activating Infinispan subsystem.
+17:10:34,686 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 40) JBAS011800: Activating Naming Subsystem
+17:10:34,692 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+17:10:34,692 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+17:10:34,738 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) JBAS017502: Undertow 1.1.0.Final starting
+17:10:34,740 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-8) JBAS010408: Starting JCA Subsystem (IronJacamar 1.1.9.Final)
+17:10:34,741 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017502: Undertow 1.1.0.Final starting
+17:10:34,826 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+17:10:34,841 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) JBAS015400: Bound mail session [java:jboss/mail/Default]
+17:10:34,924 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+17:10:34,943 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) JBAS010417: Started Driver service with driver-name = h2
+17:10:35,489 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 47) JBAS017527: Creating file handler for path C:\wildfly-8.2.0.Final/welcome-content
+17:10:35,510 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 4.0.6.Final
+17:10:35,547 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017525: Started server default-server.
+17:10:35,567 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) JBAS017531: Host default-host starting
+17:10:35,694 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) JBAS017519: Undertow HTTP listener default listening on localhost/127.0.0.1:18180
+17:10:35,860 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Starting deployment of "MyServer.war" (runtime-name: "MyServer.war")
+17:10:35,870 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) JBAS015012: Started FileSystemDeploymentService for directory C:\wildfly-8.2.0.Final\standalone\deployments
+17:10:35,913 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+17:10:36,256 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.2.Final
+17:10:36,384 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) JBAS011401: Read persistence.xml for MyServer?
+17:10:36,726 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 50) JBAS011409: Starting Persistence Unit (phase 1 of 2) Service 'MyServer.war#MyServer?'
+17:10:36,753 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 50) HHH000204: Processing PersistenceUnitInfo [
+	name: MyServer?
+	...]
+17:10:36,886 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 50) HHH000412: Hibernate Core {4.3.7.Final}
+17:10:36,888 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 50) HHH000206: hibernate.properties not found
+17:10:36,890 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 50) HHH000021: Bytecode provider name : javassist
+17:10:37,149 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) JBAS016002: Processing weld deployment MyServer.war
+17:10:37,277 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-5) HV000001: Hibernate Validator 5.1.3.Final
+17:10:37,421 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named MyStatelessEJB in deployment unit deployment "MyServer.war" are as follows:
+
+	java:global/MyServer/MyStatelessEJB!oop2.teorijske.v09.beans.MyRemote
+	java:app/MyServer/MyStatelessEJB!oop2.teorijske.v09.beans.MyRemote
+	java:module/MyStatelessEJB!oop2.teorijske.v09.beans.MyRemote
+	java:jboss/exported/MyServer/MyStatelessEJB!oop2.teorijske.v09.beans.MyRemote
+	java:global/MyServer/MyStatelessEJB
+	java:app/MyServer/MyStatelessEJB
+	java:module/MyStatelessEJB
+
+17:10:37,422 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named ZapisnikEJB in deployment unit deployment "MyServer.war" are as follows:
+
+	java:global/MyServer/ZapisnikEJB!oop2.teorijske.v09.ssluzba.beans.Zapisnik
+	java:app/MyServer/ZapisnikEJB!oop2.teorijske.v09.ssluzba.beans.Zapisnik
+	java:module/ZapisnikEJB!oop2.teorijske.v09.ssluzba.beans.Zapisnik
+	java:jboss/exported/MyServer/ZapisnikEJB!oop2.teorijske.v09.ssluzba.beans.Zapisnik
+	java:global/MyServer/ZapisnikEJB
+	java:app/MyServer/ZapisnikEJB
+	java:module/ZapisnikEJB
+
+17:10:37,422 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named UnosEJB in deployment unit deployment "MyServer.war" are as follows:
+
+	java:global/MyServer/UnosEJB!oop2.teorijske.v09.ssluzba.beans.Unos
+	java:app/MyServer/UnosEJB!oop2.teorijske.v09.ssluzba.beans.Unos
+	java:module/UnosEJB!oop2.teorijske.v09.ssluzba.beans.Unos
+	java:jboss/exported/MyServer/UnosEJB!oop2.teorijske.v09.ssluzba.beans.Unos
+	java:global/MyServer/UnosEJB
+	java:app/MyServer/UnosEJB
+	java:module/UnosEJB
+
+17:10:37,423 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named MySingletonEJB in deployment unit deployment "MyServer.war" are as follows:
+
+	java:global/MyServer/MySingletonEJB!oop2.teorijske.v09.beans.MyRemote
+	java:app/MyServer/MySingletonEJB!oop2.teorijske.v09.beans.MyRemote
+	java:module/MySingletonEJB!oop2.teorijske.v09.beans.MyRemote
+	java:jboss/exported/MyServer/MySingletonEJB!oop2.teorijske.v09.beans.MyRemote
+	java:global/MyServer/MySingletonEJB
+	java:app/MyServer/MySingletonEJB
+	java:module/MySingletonEJB
+
+17:10:37,429 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named FillSSluzba in deployment unit deployment "MyServer.war" are as follows:
+
+	java:global/MyServer/FillSSluzba!oop2.teorijske.v09.ssluzba.beans.FillSSluzba
+	java:app/MyServer/FillSSluzba!oop2.teorijske.v09.ssluzba.beans.FillSSluzba
+	java:module/FillSSluzba!oop2.teorijske.v09.ssluzba.beans.FillSSluzba
+	java:global/MyServer/FillSSluzba
+	java:app/MyServer/FillSSluzba
+	java:module/FillSSluzba
+
+17:10:37,430 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named MyStatefulEJB in deployment unit deployment "MyServer.war" are as follows:
+
+	java:global/MyServer/MyStatefulEJB!oop2.teorijske.v09.beans.MyRemote
+	java:app/MyServer/MyStatefulEJB!oop2.teorijske.v09.beans.MyRemote
+	java:module/MyStatefulEJB!oop2.teorijske.v09.beans.MyRemote
+	java:jboss/exported/MyServer/MyStatefulEJB!oop2.teorijske.v09.beans.MyRemote
+	java:global/MyServer/MyStatefulEJB
+	java:app/MyServer/MyStatefulEJB
+	java:module/MyStatefulEJB
+
+17:10:37,829 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) JBAS016005: Starting Services for CDI deployment: MyServer.war
+17:10:37,876 INFO  [org.jboss.weld.Version] (MSC service thread 1-5) WELD-000900: 2.2.6 (Final)
+17:10:37,997 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) JBAS016008: Starting weld service for deployment MyServer.war
+17:10:38,214 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 50) JBAS011409: Starting Persistence Unit (phase 2 of 2) Service 'MyServer.war#MyServer?'
+17:10:38,307 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 50) HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+17:10:38,943 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 50) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+17:10:38,952 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 50) HHH000431: Unable to determine H2 database version, certain features may not work
+17:10:39,100 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] (ServerService Thread Pool -- 50) HHH000397: Using ASTQueryTranslatorFactory
+17:10:39,534 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 50) HHH000228: Running hbm2ddl schema update
+17:10:39,534 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 50) HHH000102: Fetching database metadata
+17:10:39,546 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 50) HHH000396: Updating schema
+17:10:39,559 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000261: Table found: TEST.PUBLIC.POLAGANJE
+17:10:39,559 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000037: Columns: [datum, student_index, predmet_sifra, id, ocena]
+17:10:39,559 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000108: Foreign keys: [fk_hmt89iro63emylrmhqg5inqtw, fk_st3x9hqll8mfn3hharcb6qfms]
+17:10:39,560 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000126: Indexes: [fk_hmt89iro63emylrmhqg5inqtw_index_8, fk_st3x9hqll8mfn3hharcb6qfms_index_8, primary_key_8]
+17:10:39,564 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000261: Table found: TEST.PUBLIC.PREDMET
+17:10:39,565 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000037: Columns: [naziv, sifra]
+17:10:39,565 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000108: Foreign keys: []
+17:10:39,565 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000126: Indexes: [primary_key_1]
+17:10:39,569 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000261: Table found: TEST.PUBLIC.STUDENT
+17:10:39,569 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000037: Columns: [ime, index, godina]
+17:10:39,569 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000108: Foreign keys: []
+17:10:39,570 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (ServerService Thread Pool -- 50) HHH000126: Indexes: [primary_key_b]
+17:10:39,571 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 50) HHH000232: Schema update complete
+17:10:40,477 INFO  [stdout] (ServerService Thread Pool -- 52) Hibernate: select student0_.index as index1_2_0_, student0_.godina as godina2_2_0_, student0_.ime as ime3_2_0_ from Student student0_ where student0_.index=?
+
+17:10:40,538 INFO  [oop2.teorijske.v09.ssluzba.beans.FillSSluzba] (ServerService Thread Pool -- 52) Podaci vec postoje.
+17:10:40,767 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) JBAS017534: Registered web context: /MyServer
+17:10:40,823 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 28) JBAS018559: Deployed "MyServer.war" (runtime-name : "MyServer.war")
+17:10:40,844 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:19990/management
+17:10:40,845 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:19990
+17:10:40,845 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: WildFly 8.2.0.Final "Tweek" started in 9185ms - Started 372 of 423 services (92 services are lazy, passive or on-demand)

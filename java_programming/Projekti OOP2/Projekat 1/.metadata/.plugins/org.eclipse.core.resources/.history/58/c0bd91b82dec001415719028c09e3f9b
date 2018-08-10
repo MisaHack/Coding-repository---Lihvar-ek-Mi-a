@@ -1,0 +1,8 @@
+package abstractFigures;
+
+public class TestFeatures {
+   public static void main(String [] args){
+	   Player1_Board p1 = new Player1_Board();
+	   p1.printTable();
+   }
+}

@@ -1,0 +1,12 @@
+package networkPackage.remote;
+
+/**
+ * Remote interfejs igre.
+ * 
+ * @author Miša
+ *
+ */
+
+public class SubmarineNet {
+
+}
