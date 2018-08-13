@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <!-- saved from url=(0014) about:internet -->
+   <title>HTML5 Feature Detection</title>
+   <script src="modernizr-custom.js"></script>
+</head>
+<body>
+   <p>The verdict is... <span id="result"></span></p>
+   <script>
+      // Find the element on the page (named result) where you can show
+      // the results.
+      var result = document.getElementById("result");
+      if (Modernizr.htmlimports) {
+         result.innerHTML = "Rejoice! Your browser supports HTML Imports.";
+      }
+      else {
+         result.innerHTML = "Your feeble browser doesn't support HTML Imports.";
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/*Heading on the page css_demo*/
+h1{
+   text-align: center;
+   color: blue;
+}
+
+/*Formatting paragraph on the page css_demo_class*/
+/*Class selector*/
+.ArticleTitle{
+   font-family: Garamond, serif;
+   font-size: 100px;
+}
+
+/*Pseudo-class selector*/
+.BackwardLink:link{
+   color:red;
+}
+
+/*Pseudo-class selector*/
+.BackwardLink:visited{
+   color:blue;
+}
+
+/*Atribute selector*/
+input[type="text"]{
+   background-color:silver;
+}
+
+/*Atribute selector*/
+label[for="name"]{
+   width:200px;
+}
