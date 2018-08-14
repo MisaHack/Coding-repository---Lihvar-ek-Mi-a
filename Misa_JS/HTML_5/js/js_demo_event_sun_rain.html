@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <!-- saved from url=(0014) about:internet -->
+   <title>Sun & Rain</title>
+   <script src="js_sun_rain.js"></script>
+</head>
+<body>
+   <p>Click on this image to change Sun & Rain.</p>
+   <img id="dayImage" src="sunny_day.jpg" alt="Sunny Day">
+
+   <script>
+      //connecting to an event dynamically
+      var imgObject=document.getElementById("dayImage");
+      imgObject.onclick=swapImage;
+   </script>
+</body>
+</html>
