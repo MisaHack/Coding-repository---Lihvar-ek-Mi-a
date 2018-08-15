@@ -68,3 +68,76 @@ footer .Disclaimer{
 footer a{
    margin: 8px;
 }
+
+/*Format of floating figure box*/
+.FloatDnD{
+   float: left;
+   margin-left:0px;
+   margin-top: 0px;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.FloatDnD figcaption{
+   max-width: 200px;
+   font-size: small;
+   font-style: italic;
+   margin-bottom: 5px;
+}
+
+.First{
+   margin-bottom: 320px;
+}
+
+.Ecology{
+   float:left;
+   margin-left:0px;
+   margin-top:0px;
+   margin-right: 20px;
+   margin-bottom:0px;
+}
+
+.Ecology figcaption{
+   font-size: small;
+   font-style: italic;
+   max-width: 200px;
+   margin-bottom:100px;
+}
+
+.Second{
+   margin-bottom: 50px;
+}
+
+.Atharon{
+   float: left;
+   margin-left: 0px;
+   margin-top:0px;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.Atharon figcaption{
+   font-size: small;
+   font-style: italic;
+   max-width: 200px;
+   margin-bottom: 5px;
+}
+
+.Third{
+   margin-bottom: 70px;
+}
+
+.GameOfLife{
+   float: left;
+   margin-left: 0px;
+   margin-top: 0px;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.GameOfLife figcaption{
+   font-size: small;
+   font-style: italic;
+   max-width: 200px;
+   margin-bottom: 5px;
+}

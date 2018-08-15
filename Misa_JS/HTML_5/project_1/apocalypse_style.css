@@ -68,3 +68,19 @@ body{
 .Footer p{
    margin: 3px;
 }
+
+/*Format the floating figure box*/
+.FloatFigure{
+   float: left;
+   margin-left: 0px;
+   margin-top: 0px;
+   margin right: 20px;
+   margin-bottom: 0px;
+}
+
+.FloatFigure p{
+   max-width: 200px;
+   font-size: small;
+   font-style: italic;
+   margin-bottom: 5px;
+}
