@@ -1,0 +1,70 @@
+body{
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   max-width: 800px;
+}
+
+.Header{
+   background-color: rgb(116, 152, 173);
+   border: thin rgb(0, 9, 20) solid;
+   padding: 20px;
+   margin: 20px;
+   text-align: center;
+}
+
+.Header h1{
+   margin: 0px;
+   color: white;
+   font-size: xx-large;
+}
+
+.Header .Description{
+   margin: 0px;
+   font-weight: bold;
+}
+
+.Header .Byline{
+   font-style: italic;
+   font-size: small;
+   margin: 0px;
+}
+
+.Content{
+   font-size: medium;
+   font-family: "Courier New", Courier, monospace;
+   padding-top: 20px;
+   padding-bottom: 5px;
+   padding-left: 50px;
+   padding-right: 50px;
+   line-height: 120%;
+}
+
+.Content .Start{
+   font-weight: 600;
+   font-size: large;
+   font-variant: small-caps;
+}
+
+.Content h2{
+   color: rgb(39, 95, 127);
+   margin-bottom: 2px;
+   font-size: x-large;
+}
+
+.Content p{
+   margin-top: 0px;
+}
+
+.Footer{
+   text-align: center;
+   font-size: x-small;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+.Footer .Disclaimer{
+   font-style: italic;
+}
+
+.Footer a{
+   margin: 8px;
+}
