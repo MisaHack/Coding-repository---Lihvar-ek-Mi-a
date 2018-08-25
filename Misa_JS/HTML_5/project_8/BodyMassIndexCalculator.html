@@ -5,11 +5,18 @@
    <!-- saved from url=(0014) about:internet -->
    <title>BMI Calculator</title>
 
+   <style>
+      label{
+        display: inline-block;
+        width: 60px;
+      }
+   </style>
+
    <script>
       function CalculateBMI(feet, inches, pounds, resultElementName){
-         inches = Number(inches);
-         pounds = Number(pounds);
-         feet = Number(feet);
+         var inches = Number(inches);
+         var pounds = Number(pounds);
+         var feet = Number(feet);
 
          var totalInches = (feet * 12) + inches;
 
@@ -28,7 +35,7 @@
       <input name="inches"> inches<br>
 
       <label for="pounds">Weight:</label>
-      <input name="pounds"> pounds</input>
+      <input name="pounds"> pounds<br><br>
 
       <input type="button" name="calc" value="Calculate" onclick="CalculateBMI(this.form.feet.value, this.form.inches.value, this.form.pounds.value, 'result')"></input>
    </form>
@@ -45,7 +52,7 @@
          <td>Underweight</td>
       </tr>
       <tr>
-         <td>18.5 &#8211; 29.9</td>
+         <td>18.5 &#8211; 24.9</td>
          <td>Normal</td>
       </tr>
       <tr>
@@ -53,7 +60,7 @@
          <td>Overweight</td>
       </tr>
       <tr>
-         <td>30.0 nad Above</td>
+         <td>30.0 and Above</td>
          <td>Obese</td>
       </tr>
    </table>
