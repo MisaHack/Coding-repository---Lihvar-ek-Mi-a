@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Microdata Example</title>
+
+   <style>
+      body{
+         font-family: verdana;
+         font-size: small;
+         margin-left: 25px;
+         mergin-right: 25px;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>About Me</h1>
+
+   <div itemscope itemtype="http://schema.org/Person">
+      <img itemprop="image" src="relja.jpg" alt="Relja">
+      <p>This web page is the work of
+         <span itemprop="jobTitle" style="display:none">Web Developer</span>
+         <b itemprop="name">Miša Lihvarček</b>
+         On the picture above is Relja, his friends know
+         him as
+         <b itemprop="additionalName">The Rock</b>.
+      </p>
+
+      <p>You can contact him where he works,at
+         <span itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+            <span itemprop="name">Faculty of Technical Sciences</span>
+            (phone
+            <span itemprop="telephone">+38121-450-810</span>
+            and ask for Relja Ranisavljević) or email
+            <span itemprop="email">relja_r@gmail.com</span>.
+         </span>
+      </p>
+
+      <p>Or, visit Relja on the job at:<br>
+      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+         <span itemprop="streetAddress">Trg Dositeja Obradovića 6</span><br>
+         <span itemprop="addressLocality">Novi Sad</span>,
+         <span itemprop="addressRegion">Vojvodina</span>,
+         <span itemprop="PostalCode">21000</span><br>
+         <span itemprop="addressCountry">Serbia</span><br>
+      </span>
+      <a itemprop="url" href="http://www.ftn.uns.ac.rs/n1386094394/faculty-of-technical-sciences">
+         www.ftn.uns.ac.rs
+      </a>
+      </p>
+
+   </div>
+</body>
+</html>
