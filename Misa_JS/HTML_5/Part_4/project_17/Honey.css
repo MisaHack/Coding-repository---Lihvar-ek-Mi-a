@@ -1,0 +1,55 @@
+body{
+   font-family: 'Palatino Linotype',serif;
+   max-width: 600px;
+   padding: 0px 30px;
+}
+
+h1{
+   margin-bottom: 0px;
+}
+
+p{
+   margin-top: 0px;
+}
+
+fieldset{
+   margin-bottom: 15px;
+   padding: 10px;
+}
+
+legend{
+   padding: 0px 3px;
+   font-weight: bold;
+   font-variant: small-caps;
+}
+
+
+input:focus{
+   background: rgb(234, 234, 234);
+}
+
+/*important*/
+input{
+   width: 249px;
+}
+
+/*important*/
+select{
+   width: 253px;
+}
+
+input[type=submit]{
+   width: 150px;
+   padding: 10px;
+}
+
+.Label{
+   display: inline-block;
+   width: 125px;
+}
+
+em{
+   font-weight: bold;
+   font-style: normal;
+   color: #ff0000;
+}

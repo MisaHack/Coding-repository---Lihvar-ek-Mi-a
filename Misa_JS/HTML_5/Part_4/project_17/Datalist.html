@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <!--saved from url=(0014) about:internet-->
+   <title>Types Of Honey</title>
+   <link href="Honey.css" rel="stylesheet">
+</head>
+<body>
+   <h1>Beekeeper Application Form</h1>
+   <form id="beekeeperForm" action="#">
+      <p><i>Please complete the form.
+      Mandatory fields are marked with a </i><em>*</em></p>
+      <fieldset>
+         <legend>What's Your Favourite Honey?</legend>
+         <datalist id="honeyChoices">
+            <span class="Label">Pick an option:</span>
+            <select id="favouriteHoneyPreset">
+               <option label="Clover Honey" value="clover">
+               <option label="Manuka Honey" value="manuka">
+               <option label="Sourwood Honey" value="sourwood">
+               <option label="Buckwheat Honey" value="buckwheat">
+               <option label="Rosemary Honey" value="rosemary">
+               <option label="Dandelion Honey" value="dandelion">
+               <option label="Acacia Honey" value="acacia">
+               <option label="Eucalyptus Honey" value="eucalyptus">
+               <option label="Sage Honey" value="sage">
+               <option label="Lavender Honey" value="lavander">
+               <option label="Heather Honey" value="heather">
+            </select>
+            <br>
+            <span class="Label">Or type it in:</span>
+         </datalist>
+         <input list="honeyChoices" id="favouriteHoney" required>
+      </fieldset>
+      <p><input type="submit" value="Submit Application"></p>
+   </form>
+</body>
+</html>
