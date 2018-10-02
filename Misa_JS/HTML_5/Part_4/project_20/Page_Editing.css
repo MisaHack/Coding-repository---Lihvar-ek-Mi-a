@@ -1,0 +1,26 @@
+body{
+   font-family: 'Palatino Linotype',serif;
+}
+
+h1{
+   font-size: large;
+   margin-top: 20px;
+   margin-bottom: 1px;
+}
+
+iframe{
+   width: 800px;
+   height: 350px;
+}
+
+button{
+   padding: 3px;
+}
+
+#editedHTML{
+   width: 800px;
+   height: 350px;
+   border: darkgray 2px solid;
+   overflow: scroll;
+   overflow-x: hidden;
+}
