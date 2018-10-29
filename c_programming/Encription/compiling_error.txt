@@ -1,2 +1,2 @@
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
+C:\Users\MIA~1\AppData\Local\Temp\ccsfNShN.o:message_hider.c:(.text+0x18): undefined reference to `encryption'
 collect2.exe: error: ld returned 1 exit status

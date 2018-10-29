@@ -4,13 +4,15 @@
    <meta charset="utf-8">
    <!-- saved from url=(0014)about:internet-->
    <title>DnD Audio</title>
+   <link href="video.css" rel="stylesheet">
+   <script src="play_stop.js"></script>
 </head>
-<body>
+<body onclick="play_stop()">
    <p><cite>Wast stretches on the infinite plane are unexplored and unknown...</cite>:</p>
    <audio src="The_Hinterlands.mp3" controls></audio><br>
    <audio src="The_Hinterlands.mp3" controls preload="none"></audio><br>
    <audio src="The_Hinterlands.mp3" controls autoplay muted></audio><br>
-   <audio src="metal.mp3" autoplay loop></audio>
+   <audio id="background" src="metal.mp3" loop></audio>
    <p>Lego play set.<p>
    <video src="lego.mp4" controls preload="none" loop muted width="500" height="300" poster="lego.png"></video><br>
    <video src="earth.mp4" controls preload="none" loop muted width="500" height="300" poster="earth.jpg"></video><br>
@@ -25,15 +27,29 @@
       <source src="lego.webm" type="video/webm">
       <p>Fallback content. Your browser doesn't support HTML5 video.</p>
    </video>
+   <br>
+   <video id="customPlayer" loop ontimeupdate="progressUpdate()">
+      <source src="earth.mp4" type="video/mp4">
+   </video>
+   <br>
+   <button onclick="play()">Play</button>
+   <button onclick="pause()">Pause</button>
+   <button onclick="stop()">Stop</button>
 
-   <object id="flowplayer" width="700" height="400"
-data="http://releases.flowplayer.org/swf/flowplayer-3.2.18.swf"
-type="application/x-shockwave-flash">
-<param name="movie" value="lego.mp4">
-<img src="lego.png" alt="A lazy day at the beach">
-<p>Your browser does not support HTML5 video or Flash.</p>
-<p>You can download the video in <a href="lego.mp4">MP4 H.264</a>
-or <a href="lego.webm">WebM</a> format.</p>
-</object>
+   <button onclick="speedUp()">Fast</button>
+   <button onclick="slowDown()">Slow</button>
+   <button onclick="normal()">Normal</button>
+   <button onclick="reverse()">Reverse</button>
+
+   <div id="durationBar">
+      <div id="positionBar">
+         <span id="displayStatus">Idle</span>
+      </div>
+   </div>
+
+   <br>
+
+   <progress id="progress" value="0" max="100"></progress>
+
 </body>
 </html>
