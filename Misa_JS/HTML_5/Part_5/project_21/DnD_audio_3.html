@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <!-- saved from url=(0014)about:internet-->
+   <title>DnD Audio</title>
+   <script src="play_stop.js"></script>
+   <script src="video.js"></script>
+   <link href="video.css" rel="stylesheet">
+   <link href="video-js.css" rel="stylesheet">
+</head>
+<body onclick="play_stop()">
+   <p><cite>Wast stretches on the infinite plane are unexplored and unknown...</cite>:</p>
+   <audio src="The_Hinterlands.mp3" controls></audio><br>
+   <audio src="The_Hinterlands.mp3" controls preload="none"></audio><br>
+   <audio src="The_Hinterlands.mp3" controls autoplay muted></audio><br>
+   <audio id="background" src="metal.mp3" loop></audio>
+   <p>Lego play set.<p>
+   <video src="lego.mp4" controls preload="none" loop muted width="500" height="300" poster="lego.png"></video><br>
+   <video src="earth.mp4" controls preload="none" loop muted width="500" height="300" poster="earth.jpg"></video><br>
+   <audio controls>
+      <source src="The_Hinterlands.mp3" type="audio/mp3">
+      <source src="The_Hinterlands.ogg" type="audio/ogg">
+      <p>Fallback content. Your browser doesn't support HTML5 audio.</p>
+   </audio>
+   <br>
+   <video controls width="500" height="300">
+      <source src="lego.mp4" type="video/mp4">
+      <source src="lego.webm" type="video/webm">
+      <p>Fallback content. Your browser doesn't support HTML5 video.</p>
+   </video>
+   <br>
+   <video id="customPlayer" loop ontimeupdate="progressUpdate()">
+      <source src="earth.mp4" type="video/mp4">
+   </video>
+   <br>
+   <button onclick="play()">Play</button>
+   <button onclick="pause()">Pause</button>
+   <button onclick="stop()">Stop</button>
+
+   <button onclick="speedUp()">Fast</button>
+   <button onclick="slowDown()">Slow</button>
+   <button onclick="normal()">Normal</button>
+   <button onclick="reverse()">Reverse</button>
+
+   <div id="durationBar">
+      <div id="positionBar">
+         <span id="displayStatus">Idle</span>
+      </div>
+   </div>
+
+   <br>
+
+   <progress id="progress" value="0" max="100"></progress>
+
+   <br>
+
+   <div class="video-js-box">
+      <video class="video-js" controls width="640" height="480" data-setup="{}">
+         <source src="earth.mp4" type="video/mp4">
+      </video>
+   </div>
+
+</body>
+</html>

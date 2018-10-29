@@ -4,8 +4,10 @@
    <meta charset="utf-8">
    <!-- saved from url=(0014)about:internet-->
    <title>DnD Audio</title>
-   <link href="video.css" rel="stylesheet">
    <script src="play_stop.js"></script>
+   <script src="video.js"></script>
+   <link href="video.css" rel="stylesheet">
+   <link href="video-js.css" rel="stylesheet">
 </head>
 <body onclick="play_stop()">
    <p><cite>Wast stretches on the infinite plane are unexplored and unknown...</cite>:</p>
@@ -50,6 +52,14 @@
    <br>
 
    <progress id="progress" value="0" max="100"></progress>
+
+   <br>
+
+   <div class="video-js-box">
+      <video class="video-js" controls width="640" height="480" data-setup="{}">
+         <source src="earth.mp4" type="video/mp4">
+      </video>
+   </div>
 
 </body>
 </html>
