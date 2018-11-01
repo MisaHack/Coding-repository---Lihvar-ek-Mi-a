@@ -1,0 +1,8 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:15.000
+This text will be here for 15 seconds
+
+00:00:15.000 --> 00:00:25.000
+-15 seconds have passed. This text will last for 10 seconds.
+-Thank you for patience.

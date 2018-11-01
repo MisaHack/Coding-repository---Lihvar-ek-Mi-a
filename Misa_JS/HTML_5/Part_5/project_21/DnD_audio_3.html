@@ -9,7 +9,9 @@
    <link href="video.css" rel="stylesheet">
    <link href="video-js.css" rel="stylesheet">
 </head>
-<body onclick="play_stop()">
+<body>
+   <img src="start-stop.png" alt="start-stop picture" width="20" height="20" onclick="play_stop()">
+   <strong>Start/Stop Background Music</strong>
    <p><cite>Wast stretches on the infinite plane are unexplored and unknown...</cite>:</p>
    <audio src="The_Hinterlands.mp3" controls></audio><br>
    <audio src="The_Hinterlands.mp3" controls preload="none"></audio><br>
@@ -32,6 +34,7 @@
    <br>
    <video id="customPlayer" loop ontimeupdate="progressUpdate()">
       <source src="earth.mp4" type="video/mp4">
+      <track src="subtitle.vtt" srclang="en" kind="subtitles" label="English" default />
    </video>
    <br>
    <button onclick="play()">Play</button>
@@ -58,6 +61,8 @@
    <div class="video-js-box">
       <video class="video-js" controls width="640" height="480" data-setup="{}">
          <source src="earth.mp4" type="video/mp4">
+         <track src="subtitle.vtt" srclang="en" kind="subtitles" label="Subtitle-1" default/>
+         <track src="subtitle_2.vtt" srclang="en" kind="subtitles" label="Subtitle-2" />
       </video>
    </div>
 
