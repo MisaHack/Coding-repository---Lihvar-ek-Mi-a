@@ -13,5 +13,4 @@ public class Demo_1 {
 		  System.out.println("Strings are not equal"); 
 	   }
 	}
-	
 }

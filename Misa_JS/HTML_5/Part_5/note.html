@@ -1,0 +1,67 @@
+<html>
+<head>
+  <script>
+    var i = 0;
+    var initialization = 0;
+    var niz = [];
+
+    function C_pa_D(){
+       if(initialization == 0){
+         var notaC = document.getElementById("C");
+         var notaD = document.getElementById("D");
+         niz.push(notaC);
+         niz.push(notaD);
+         initialization = 1;
+       }
+
+       if(i > 1){
+          i = 0;
+       }
+
+       niz[i].play();
+       i++;
+    }
+
+    function NotC(){
+       var notaC = document.getElementById("C");
+       notaC.play();
+    }
+
+    function NotD(){
+       var notaD = document.getElementById("D");
+       notaD.play();
+    }
+  </script>
+</head>
+
+<body>
+   <audio src="https://dl.dropboxusercontent.com/s/twkvpiakbb4lq4e/10.mp3…" id="C"></audio>
+   <audio src="https://dl.dropboxusercontent.com/s/4o0osz91eymso0h/11.mp3…" id="D"></audio>
+
+   <button type="button" onclick="NotC()" >nota C </button>
+   <button type="button" onclick="NotD()" >nota D </button>
+   <button type="button" onclick="C_pa_D()">C pa D</button>
+</body>
+</html>
+
+<!--
+MOJ NEUSPELI POKUSAJ
+<html>
+<body>
+
+<button type="button" onclick="NotC()" >nota C </button>
+
+
+<script>
+
+var note=["https://dl.dropboxusercontent.com/s/4o0osz91eymso0h/11.mp3…"]
+function NotC(){
+var notaC =note[0];
+notaC.play();
+
+}
+
+</script>
+</body>
+</html>
+-->

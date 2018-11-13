@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Sound Effects</title>
+   <script src="game.js"></script>
+   <link href="game.css" rel="stylesheet">
+</head>
+<body>
+   <audio id="audio1">
+      <source src="boing1.wav" type="audio/wav">
+      <source src="beep.mp3" type="audio/mp3">
+   </audio>
+
+   <audio id="audio2">
+      <source src="boing2.wav" type="audio/wav">
+      <source src="beep.mp3" type="audio/mp3">
+   </audio>
+
+   <audio id="audio3">
+      <source src="boing3.wav" type="audio/wav">
+      <source src="beep.mp3" type="audio/mp3">
+   </audio>
+
+   <audio id="backgroundMusic" loop>
+      <source src="theowlnamedorion.mp3" type="audio/mp3">
+      <source src="theowlnamedorion.ogg" type="audio/ogg">
+   </audio>
+
+   <canvas id="canvas" width="400" height="300">
+   </canvas>
+
+   <div>
+      <button onclick="addBall()">Add Ball</button>
+      <button onclick="clearBalls()">Clear Canvas</button>
+   </div>
+
+   <div>
+      Ball Size: <input id="ballSize" type="number" min="0" max="50" value="15">
+      <input id="connectedBalls" type="checkbox">Connect Balls<br>
+   </div>
+</body>
+</html>
