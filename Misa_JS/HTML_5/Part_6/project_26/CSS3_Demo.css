@@ -7,3 +7,107 @@
    /*gently round the corners*/
    border-radius: 25px;
 }
+
+.color_change{
+   border: thin rgb(51, 102, 153) solid;
+   padding: 10px;
+   margin: 10px;
+   text-align: center;
+   background: yellow;
+   background: radial-gradient(ellipse,red,yellow);
+}
+
+.round{
+   width: 50px;
+   height: 50px;
+   background-color: red;
+   border-radius: 50%;
+   text-align: center;
+   margin-left: 50%;
+}
+
+.round .inner{
+  display: flex; align-items: center; justify-content: center;
+}
+
+.mr_bean { transition: all 0.3s ease-in-out 0s; }
+
+.mr_bean:hover
+{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.transparentBox{
+    /*4th parameter is transparency level*/
+    background: rgba(170,240,0,0.4);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.transparentBox_2{
+   background: rgb(170,240,0);
+   /*style propertie*/
+   opacity: 0.4;
+   padding: 10px;
+   margin: 10px;
+   text-align: center;
+}
+
+.four_corners{
+   background: yellow;
+   padding: 50px;
+   margin: 10px;
+   text-align: center;
+   /*4 different corners*/
+   border-radius: 25px 50px 75px 100px;
+}
+
+.ellipse{
+   background: green;
+   padding: 15px;
+   margin: 10px;
+   text-align: center;
+   /*Ellipse shaped corners*/
+   border-top-left-radius: 80px 40px;
+   border-top-right-radius: 80px 40px;
+   border-bottom-left-radius: 80px 40px;
+   border-bottom-right-radius: 80px 40px;
+}
+
+#back{
+   background-image: url('red_rose_rotate.png'),url('red_rose.png');
+   background-position: left top, right bottom;
+   background-repeat: no-repeat, no-repeat;
+}
+
+.rose_corner{
+   background: pink;
+   padding: 20px;
+   margin: 10px;
+   text-align: center;
+   background-image: url('rose_icon_small.png'),url('rose_icon_small.png');
+   background-position: left top, right bottom;
+   background-repeat: no-repeat, no-repeat;
+}
+
+.sliding_doors_pattern{
+  background: pink;
+  padding: 200px;
+  margin: 10px;
+  background-image: url('rose_icon_small.png'),url('rose_icon.png'),url('rose_icon_small.png');
+  background-position: left top, center, right bottom;
+  background-repeat: no-repeat, repeat-x, no-repeat;
+}
+
+.shadow{
+  background: #33995d;
+  padding: 20px;
+  margin: 40px;
+  text-align: center;
+  border-radius: 25px;
+  /*Shadow*/
+  box-shadow: 10px 10px 10px gray;
+}
