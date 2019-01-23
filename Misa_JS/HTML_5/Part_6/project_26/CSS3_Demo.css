@@ -30,13 +30,15 @@
   display: flex; align-items: center; justify-content: center;
 }
 
-.mr_bean { transition: all 0.3s ease-in-out 0s; }
+/*This thansition is goin counterclockwise*/
+.mr_bean { transition: all 3s ease-in-out 0s; }
 
+/*This transition is going clockwise*/
 .mr_bean:hover
 {
     cursor: default;
     transform: rotate(360deg);
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 3s ease-in-out 0s;
 }
 
 .transparentBox{
@@ -102,12 +104,171 @@
   background-repeat: no-repeat, repeat-x, no-repeat;
 }
 
-.shadow{
+.box_shadow{
   background: #33995d;
   padding: 20px;
   margin: 40px;
   text-align: center;
   border-radius: 25px;
   /*Shadow*/
-  box-shadow: 10px 10px 10px gray;
+  box-shadow: 10px 10px 10px gray, 0px 0px 30px yellow inset;
+}
+
+.text_shadow{
+   border: thin rgb(51, 102, 153) solid;
+   padding: 20px;
+   margin: 10px;
+   text-align: center;
+   font-size: 30px;
+   font-weight: bold;
+   text-shadow: gray 10px 10px 7px;
+}
+
+.radial_gradient{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: radial-gradient(circle,yellow,green);
+}
+
+.linear_gradient{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: linear-gradient(to top left, white,lightblue);
+}
+
+.striped_gradient{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: linear-gradient(to top, red 0%, orange 20%, yellow 80%, violet 100%);
+}
+
+.radial_gradient_2{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: -webkit-radial-gradient(ellipse, white,lightblue);
+}
+
+.radial_gradient_blend{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: radial-gradient(circle,yellow 10%, green 70%, blue, white, black);
+}
+
+.radial_gradient_right_center{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: radial-gradient(circle at 90% 5%, yellow, green);
+}
+
+.repeating_gradient{
+   margin: 10px;
+   padding: 30px;
+   text-align: center;
+   background: repeating-radial-gradient(circle,yellow,green,red,yellow 20%);
+
+   -webkit-transition: background 5s;
+   transition: background 5s;
+}
+
+.repeating_gradient:hover{
+   background: repeating-radial-gradient(circle,green,red,yellow,green 20%);
+}
+
+.hover_btn{
+   color: white;
+   background: lightgreen;
+   font-weight: bold;
+   border: solid 1px black;
+   cursor: pointer;
+   padding: 20px;
+   margin: 10px;
+   margin-left: 45%;
+   margin-bottom: 20px;
+
+   border-radius: 25px;
+
+   box-shadow: 10px 10px 10px gray, 0px 0px 60px yellow inset;
+
+   -webkit-transition: background 2s, color 2s, box-shadow 2s, border-radius 2s;
+   transition: background 2s, color 2s, box-shadow 2s, border-radius 2s;
+
+
+}
+
+.hover_btn:hover{
+   color: black;
+   background: yellow;
+   box-shadow: 10px 10px 10px gray, 0px 0px 60px lightgreen inset;
+   border-radius: 0px;
+}
+
+.transition_house{
+   position: relative;
+   height: 300px;
+}
+
+.transition_house img{
+   position: absolute;
+   -webkit-transition: opacity 10s;
+   transition: opacity 10s;
+}
+
+.solid{
+   opacity: 1;
+}
+
+.transparent{
+   opacity: 0;
+}
+
+.buttons button{
+   padding: 20px;
+}
+
+.transform_demo{
+   color: white;
+   background: black;
+   padding: 10px;
+   margin: 10px;
+   text-align: center;
+   width: 25%;
+   margin-left: 40%;
+   transition: all 1s;
+}
+
+.transform_demo:hover{
+   -ms-transform: scale(1.1)  translateX(-50px) skew(10deg);
+   -webkit-transform: scale(1.1) translateX(-50px) skew(10deg);
+   transform: scale(1.1) translateX(-50px) skew(10deg);
+}
+
+.gallery{
+   margin: 0px 30px 0px 30px;
+   background: rgb(216, 238, 254);
+   padding: 10px;
+   padding-left: 20%;
+}
+
+.gallery img{
+   margin: 5px;
+   padding: 5px;
+   width: 175px;
+   border: solid 1px black;
+   background: white;
+
+   -ms-transition: all 1s;
+   -webkit-transition: all 1s;
+   transition: all 1s;
+}
+
+.gallery img:hover{
+   -ms-transform: scale(2.2) rotate(10deg);
+   -webkit-transform: scale(2.2) rotate(10deg);
+   transform: scale(2.2) rotate(10deg);
 }
