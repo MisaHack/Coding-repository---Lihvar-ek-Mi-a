@@ -1,0 +1,89 @@
+body{
+   margin: 0px;
+}
+
+.leftColumn{
+   width: 28.6%;
+   float: left;
+   background-color: red;
+   color: white;
+}
+
+.rightColumn{
+   width: 71.4%;
+   float: left;
+   background-color: green;
+   color: white;
+}
+
+.leftColumn_1{
+   width: 27%;
+   margin: 5px;
+   float: left;
+   background-color: red;
+   color: white;
+}
+
+.rightColumn_1{
+   width: 68%;
+   margin: 5px;
+   float: left;
+   background-color: green;
+   color: white;
+}
+
+.leftColumn_2{
+   width: 27%;
+   margin-left: 1.666%;
+   margin-right: 1.666%;
+   background: red;
+   color: white;
+   float: left;
+}
+
+.rightColumn_2{
+   width: 68%;
+   margin-right: 1.666%;
+   background: green;
+   color: white;
+   float: left;
+}
+
+.leftColumn_3{
+   width: 50%;
+   float: left;
+   background: red;
+   color: white;
+   margin-top: 1%;
+}
+
+.rightColumn_3{
+   width: 50%;
+   float: left;
+   background: green;
+   color: white;
+   margin-top: 1%;
+}
+
+.rightColumn_3 img{
+   max-width: 98%;
+   margin-left: 1%;
+   margin-right: 1%;
+}
+
+@media(max-width: 1000px){
+   .leftColumn_3{
+      background: lime;
+   }
+}
+
+@media(max-width: 450px){
+   .leftColumn_3{
+      background: purple;
+   }
+}
+
+canvas{
+   border: 1px dashed black;
+   max-width: 100%;
+}
