@@ -87,3 +87,7 @@ canvas{
    border: 1px dashed black;
    max-width: 100%;
 }
+
+#wall{
+   display: none;
+}

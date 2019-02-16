@@ -223,6 +223,6 @@ window.onload = function canv(){
    context.fill();
    context.stroke();
 
-
-
-}
+   //New function for drawing
+   advanced();
+};
