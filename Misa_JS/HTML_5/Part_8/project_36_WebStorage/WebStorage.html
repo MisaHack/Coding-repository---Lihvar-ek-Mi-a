@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Read Text</title>
+   <link href="WebStorage.css" rel="stylesheet">
+   <script src="WebStorage.js"></script>
+</head>
+<body>
+   <fieldset>
+      <legend>Web Storage</legend>
+      <label for="localData">This goes into local storage:</label>
+      <input id="localData"><br>
+      <label for="sessionData">This goes into session storage:</label>
+      <input id="sessionData">
+   </fieldset>
+   <div>
+      <button onclick="saveData()">Save Data</button>
+      <button onclick="loadData()">Load Data</button>
+   </div>
+</body>
+</html>

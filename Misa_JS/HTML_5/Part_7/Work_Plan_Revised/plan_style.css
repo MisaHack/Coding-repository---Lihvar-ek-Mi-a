@@ -1,0 +1,163 @@
+body{
+   font-family: "MetrophobicRegular", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   max-width: 800px;
+}
+
+header{
+   background-color: rgb(116, 152, 173);
+   border: thin rgb(0, 9, 20) solid;
+   padding: 20px;
+   margin: 20px;
+   text-align: center;
+
+   border-top-left-radius: 150px 30px;
+   border-top-right-radius: 150px 30px;
+}
+
+header h1{
+   font-family: "ZeroZeroIsRegular","Lucida Sans","Lucida Sans Regular","Lucida Grande","Ludica Sans Unicode",Geneva,Verdana,sans-serif;
+   margin: 0px;
+   color: white;
+   font-size: xx-large;
+}
+
+header .Description{
+   margin: 0px;
+   font-weight: bold;
+   font-size: 30px;
+   font-family: "ImpactLabelReversedRegular";
+}
+
+header .Byline{
+   font-style: italic;
+   font-size: small;
+   margin: 0px;
+}
+
+.Content{
+   font-size: medium;
+   font-family: "Courier New", Courier, monospace;
+   padding-top: 20px;
+   padding-bottom: 5px;
+   padding-left: 50px;
+   padding-right: 50px;
+   line-height: 120%;
+
+   text-align: justify;
+}
+
+.Content .Start{
+   font-weight: 600;
+   font-size: large;
+   font-variant: small-caps;
+}
+
+.Content h2{
+   color: rgb(39, 95, 127);
+   margin-bottom: 10px;
+   font-size: x-large;
+
+
+   font-family: "ImpactLabelRegular";
+   font-weight: normal;
+
+   -webkit-transform: rotate(2deg);
+   transform: rotate(2deg);
+}
+
+.Content p{
+   margin-top: 0px;
+}
+
+footer{
+   text-align: center;
+   font-size: x-small;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+footer .Disclaimer{
+   font-style: italic;
+}
+
+footer a{
+   margin: 8px;
+}
+
+/*Format of floating figure box*/
+.FloatDnD{
+   float: left;
+   margin-left:0px;
+   margin-top: 0px;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.FloatDnD figcaption{
+   max-width: 200px;
+   font-size: small;
+   font-style: italic;
+   margin-bottom: 5px;
+}
+
+.First{
+   margin-bottom: 320px;
+}
+
+.Ecology{
+   float:left;
+   margin-left:0px;
+   margin-top:0px;
+   margin-right: 20px;
+   margin-bottom:0px;
+}
+
+.Ecology figcaption{
+   font-size: small;
+   font-style: italic;
+   max-width: 200px;
+   margin-bottom:100px;
+}
+
+.Second{
+   margin-bottom: 50px;
+}
+
+.Atharon{
+   float: left;
+   margin-left: 0px;
+   margin-top:0px;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.Atharon figcaption{
+   font-size: small;
+   font-style: italic;
+   max-width: 200px;
+   margin-bottom: 5px;
+}
+
+.Third{
+   margin-bottom: 70px;
+}
+
+.GameOfLife{
+   float: left;
+   margin-left: 0px;
+   margin-top: 0px;
+   margin-right: 20px;
+   margin-bottom: 0px;
+}
+
+.GameOfLife figcaption{
+   font-size: small;
+   font-style: italic;
+   max-width: 200px;
+   margin-bottom: 5px;
+}
+
+article, aside, figure, figcaption, footer, header, main, nav, section,
+summary {
+display: block;
+}

@@ -157,5 +157,4 @@ function advanced(){
 
    //Animation in Canvas - Falling square
    drawFrame();
-
 }

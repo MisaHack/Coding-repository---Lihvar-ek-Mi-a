@@ -1,0 +1,13 @@
+canvas{
+   border: 6px double black;
+   background: white;
+   max-height: 100%;
+}
+
+img{
+   display: none;
+}
+
+button{
+   padding: 3px;
+}
